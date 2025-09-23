@@ -1,0 +1,225 @@
+{
+  "multipart":
+  [
+    {
+      "when": {"AND": [{"facing": "up"}, {"top": "none"}, {"right": "none"}, {"bottom": "none"}, {"left": "none"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain", "x": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "down"}, {"top": "none"}, {"right": "none"}, {"bottom": "none"}, {"left": "none"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain", "x": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "north"}, {"top": "none"}, {"right": "none"}, {"bottom": "none"}, {"left": "none"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain", "y": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "east"}, {"top": "none"}, {"right": "none"}, {"bottom": "none"}, {"left": "none"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain", "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "south"}, {"top": "none"}, {"right": "none"}, {"bottom": "none"}, {"left": "none"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain", "y": 180}
+    },
+    {
+      "when": {"AND": [{"facing": "west"}, {"top": "none"}, {"right": "none"}, {"bottom": "none"}, {"left": "none"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain", "y": 270}
+    },
+
+    {
+      "when": {"AND": [{"facing": "up"}, {"top": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_top", "x": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "up"}, {"right": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_right", "x": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "up"}, {"bottom": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_bottom", "x": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "up"}, {"left": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_left", "x": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "down"}, {"top": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_right", "x": 90, "y": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "down"}, {"right": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_right", "x": 90, "y": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "down"}, {"bottom": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_right", "x": 90, "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "down"}, {"left": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_right", "x": 90, "y": 180}
+    },
+
+    {
+      "when": {"AND": [{"facing": "north"}, {"top": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_top", "y": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "north"}, {"right": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_right", "x": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "north"}, {"bottom": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_bottom", "y": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "north"}, {"left": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_left", "y": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "east"}, {"top": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_top", "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "east"}, {"right": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_left", "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "east"}, {"bottom": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_bottom", "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "east"}, {"left": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_right", "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "south"}, {"top": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_top", "y": 180}
+    },
+    {
+      "when": {"AND": [{"facing": "south"}, {"right": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_right", "y": 180}
+    },
+    {
+      "when": {"AND": [{"facing": "south"}, {"bottom": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_bottom", "y": 180}
+    },
+    {
+      "when": {"AND": [{"facing": "south"}, {"left": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_left", "y": 180}
+    },
+    {
+      "when": {"AND": [{"facing": "west"}, {"top": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_top", "y": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "west"}, {"right": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_left", "y": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "west"}, {"bottom": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_bottom", "y": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "west"}, {"left": "chain|belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_chain_right", "y": 270}
+    },
+
+    {
+      "when": {"AND": [{"facing": "up"}, {"top": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_top", "x": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "up"}, {"right": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_right", "x": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "up"}, {"bottom": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_bottom", "x": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "up"}, {"left": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_left", "x": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "down"}, {"top": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_right", "x": 90, "y": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "down"}, {"right": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_right", "x": 90, "y": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "down"}, {"bottom": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_right", "x": 90, "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "down"}, {"left": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_right", "x": 90, "y": 180}
+    },
+
+    {
+      "when": {"AND": [{"facing": "north"}, {"top": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_top", "y": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "north"}, {"right": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_right", "x": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "north"}, {"bottom": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_bottom", "y": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "north"}, {"left": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_left", "y": 0}
+    },
+    {
+      "when": {"AND": [{"facing": "east"}, {"top": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_top", "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "east"}, {"right": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_left", "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "east"}, {"bottom": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_bottom", "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "east"}, {"left": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_right", "y": 90}
+    },
+    {
+      "when": {"AND": [{"facing": "south"}, {"top": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_top", "y": 180}
+    },
+    {
+      "when": {"AND": [{"facing": "south"}, {"right": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_right", "y": 180}
+    },
+    {
+      "when": {"AND": [{"facing": "south"}, {"bottom": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_bottom", "y": 180}
+    },
+    {
+      "when": {"AND": [{"facing": "south"}, {"left": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_left", "y": 180}
+    },
+    {
+      "when": {"AND": [{"facing": "west"}, {"top": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_top", "y": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "west"}, {"right": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_left", "y": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "west"}, {"bottom": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_bottom", "y": 270}
+    },
+    {
+      "when": {"AND": [{"facing": "west"}, {"left": "belt"}]},
+      "apply": {"model": "createtransfer:blocks/transmission_chain/transmission_corner_right", "y": 270}
+    }
+  ]
+}

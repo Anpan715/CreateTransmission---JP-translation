@@ -1,0 +1,7 @@
+{
+	"parent": "createtransfer:block/transmission_chain/encased/encased_chain_belt_top",
+	"textures": {
+		"0": "createtransfer:block/andesite_chain_casing",
+		"particle": "createtransfer:block/andesite_chain_casing"
+	}
+}

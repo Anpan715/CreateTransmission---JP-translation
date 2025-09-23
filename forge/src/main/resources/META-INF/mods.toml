@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[${forge_version},)"
+#issueTrackerURL = ""
+license = "Insert License Here"
+
+[[mods]]
+modId = "createtransfer"
+version = "${version}"
+displayName = "Create: Transfer"
+authors = "SerpensSolida!"
+description = '''
+This is an example description! Tell everyone what your mod is about!
+'''
+logoFile = "icon.png"
+
+[[dependencies.createtransfer]]
+modId = "forge"
+mandatory = true
+versionRange = "[${forge_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.createtransfer]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.createtransfer]]
+modId="create"
+mandatory=true
+versionRange="${create_version}"
+ordering="NONE"
+side="BOTH"
