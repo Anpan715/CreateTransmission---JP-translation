@@ -61,7 +61,6 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	public static final EnumProperty<ConnectionType> CONNECTION_BOTTOM = EnumProperty.create("bottom", ConnectionType.class);
 	public static final EnumProperty<ConnectionType> CONNECTION_LEFT = EnumProperty.create("left", ConnectionType.class);
 	private static final Map<Direction, BiMap<ChainSide, Direction>> DIRECTION_NEIGHBOR;
-	//private static final BiMap<ChainSide, EnumProperty<ConnectionType>> CONNECTION_MAP;
 
 	static
 	{
@@ -185,7 +184,7 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 		BlockState newState = updateState(state, currentPos, world);
 		updateWater(world, newState, currentPos);
 
-		return state;
+		return newState;
 	}
 
 	private BlockState updateState(BlockState state, BlockPos pos, LevelAccessor world)
