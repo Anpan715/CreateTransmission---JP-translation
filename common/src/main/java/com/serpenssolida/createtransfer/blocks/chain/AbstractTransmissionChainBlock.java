@@ -151,7 +151,7 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 			return beltBlock.hasShaftTowards(world, otherPos, beltEntity.getBlockState(), facing.getOpposite());
 		}
 
-		return true;
+		return false;
 	}
 
 	@Override

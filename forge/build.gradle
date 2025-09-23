@@ -26,7 +26,7 @@ loom {
     runs {
         data {
             data()
-            programArgs "--client", "--mod", "createtransfer"
+            programArgs "--server", "--client", "--mod", "createtransfer"
             programArgs "--output", generatedResources.absolutePath
         }
     }

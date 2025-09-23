@@ -4,9 +4,11 @@ import com.serpenssolida.createtransfer.blocks.chain.AbstractTransmissionChainBl
 import com.serpenssolida.createtransfer.blocks.chain.EncasedTransmissionChainBlock;
 import com.serpenssolida.createtransfer.blocks.chain.TransmissionChainBlock;
 import com.simibubi.create.AllBlocks;
+import com.simibubi.create.AllTags;
 import com.simibubi.create.content.contraptions.BlockMovementChecks;
 import com.simibubi.create.content.decoration.encasing.EncasingRegistry;
 import com.simibubi.create.content.kinetics.BlockStressDefaults;
+import com.simibubi.create.content.schematics.SchematicPrinter;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -19,12 +21,11 @@ public class CreateTransferBlocks
 			.block("transmission_chain", TransmissionChainBlock::new)
 			.lang("Transmission Chain")
 			.initialProperties(() -> Blocks.REDSTONE_WIRE)
+			.tag(AllTags.AllBlockTags.BRITTLE.tag)
 			.transform(BlockStressDefaults.setNoImpact())
 			.blockstate(CreateTransferBuilderTransformers::noModel)
 			.item()
 			.model(CreateTransferBuilderTransformers::handheldItem)
-			//.transform(builder -> builder.model((ctx, prov) -> prov.basicItem(CreateTransfer.asResource("item/transmission_chain"))))
-			//.model((itemGen, prov) -> prov.blockSprite(itemGen, CreateTransfer.asResource("item/transmission_chain")))
 			.build()
 			.register();
 
@@ -32,6 +33,7 @@ public class CreateTransferBlocks
 			.block("andesite_encased_transmission_chain", EncasedTransmissionChainBlock::getAndesite)
 			.lang("Andesite Encased Transmission Chain")
 			.initialProperties(() -> Blocks.REDSTONE_WIRE)
+			.tag(AllTags.AllBlockTags.BRITTLE.tag)
 			.transform(BlockStressDefaults.setNoImpact())
 			.transform(EncasingRegistry.addVariantTo(TRANSMISSION_CHAIN))
 			.blockstate((c, p) -> transmissionChain(c, p, "andesite", true))
@@ -41,6 +43,7 @@ public class CreateTransferBlocks
 			.block("brass_encased_transmission_chain", EncasedTransmissionChainBlock::getBrass)
 			.lang("Brass Encased Transmission Chain")
 			.initialProperties(() -> Blocks.REDSTONE_WIRE)
+			.tag(AllTags.AllBlockTags.BRITTLE.tag)
 			.transform(BlockStressDefaults.setNoImpact())
 			.transform(EncasingRegistry.addVariantTo(TRANSMISSION_CHAIN))
 			.blockstate((c, p) -> transmissionChain(c, p, "brass", true))
@@ -53,8 +56,6 @@ public class CreateTransferBlocks
 	{
 		// load the class and register everything
 		CreateTransfer.LOGGER.info("Registering blocks for " + CreateTransfer.NAME);
-
-		BlockMovementChecks.registerBrittleCheck(state -> state.getBlock() instanceof AbstractTransmissionChainBlock ? BlockMovementChecks.CheckResult.SUCCESS : BlockMovementChecks.CheckResult.PASS);
 	}
 
 }

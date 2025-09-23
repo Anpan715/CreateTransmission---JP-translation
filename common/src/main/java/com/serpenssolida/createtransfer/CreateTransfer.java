@@ -3,6 +3,8 @@ package com.serpenssolida.createtransfer;
 import com.jozufozu.flywheel.core.PartialModel;
 import com.serpenssolida.createtransfer.blocks.chain.AbstractTransmissionChainBlock;
 import com.serpenssolida.createtransfer.blocks.chain.EncasedTransmissionChainBlock;
+import com.simibubi.create.AllTags;
+import com.simibubi.create.AllTags.AllBlockTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.contraptions.BlockMovementChecks;
 import com.simibubi.create.content.schematics.SchematicPrinter;
@@ -27,8 +29,6 @@ public class CreateTransfer
         CreateTransferBlockEntities.init();
         CreateTransferModels.init();
         CreateTransferSpriteShifts.init();
-
-        LOGGER.warn("DEFER:" + SchematicPrinter.shouldDeferBlock(CreateTransferBlocks.TRANSMISSION_CHAIN.getDefaultState()));
     }
 
 	public static ResourceLocation asResource(String path)
