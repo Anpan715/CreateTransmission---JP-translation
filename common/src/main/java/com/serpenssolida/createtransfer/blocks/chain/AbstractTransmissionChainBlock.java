@@ -8,6 +8,7 @@ import com.serpenssolida.createtransfer.CreateTransferBlocks;
 import com.serpenssolida.createtransfer.CreateTransferShapes;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.contraptions.BlockMovementChecks;
+import com.simibubi.create.content.contraptions.glue.SuperGlueHandler;
 import com.simibubi.create.content.kinetics.base.KineticBlock;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import com.simibubi.create.content.kinetics.belt.BeltBlock;
