@@ -1,9 +1,6 @@
 package com.serpenssolida.createtransfer.forge;
 
-import com.serpenssolida.createtransfer.CreateTransferBlocks;
 import com.serpenssolida.createtransfer.CreateTransfer;
-import com.simibubi.create.AllTags;
-import com.simibubi.create.content.schematics.SchematicPrinter;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -17,5 +14,6 @@ public class CreateTransferModForge
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         CreateTransfer.REGISTRATE.registerEventListeners(eventBus);
         CreateTransfer.init();
+        CreateTransferCreativeTabsImpl.register(eventBus);
     }
 }

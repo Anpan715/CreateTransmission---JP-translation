@@ -2,13 +2,10 @@ package com.serpenssolida.createtransfer;
 
 import com.serpenssolida.createtransfer.blocks.chain.EncasedTransmissionChainBlock;
 import com.serpenssolida.createtransfer.blocks.chain.TransmissionChainBlock;
-import com.simibubi.create.AllTags;
 import com.simibubi.create.AllTags.AllBlockTags;
 import com.simibubi.create.content.decoration.encasing.EncasingRegistry;
 import com.simibubi.create.content.kinetics.BlockStressDefaults;
 import com.tterrag.registrate.util.entry.BlockEntry;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
 import static com.serpenssolida.createtransfer.CreateTransferBuilderTransformers.transmissionChain;
@@ -16,6 +13,11 @@ import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 
 public class CreateTransferBlocks
 {
+	static
+	{
+		CreateTransferCreativeTabs.setTab(CreateTransferCreativeTabs.CREATETRANSFER_TAB_KEY);
+	}
+
 	public static final BlockEntry<TransmissionChainBlock> TRANSMISSION_CHAIN = CreateTransfer.REGISTRATE
 			.block("transmission_chain", TransmissionChainBlock::new)
 			.lang("Transmission Chain")

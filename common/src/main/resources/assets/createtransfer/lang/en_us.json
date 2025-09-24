@@ -1,4 +1,6 @@
 {
   "block.createtransfer.andesite_encased_transmission_chain": "Andesite Encased Transmission Chain",
-  "block.createtransfer.transmission_chain": "Transmission Chain"
+  "block.createtransfer.brass_encased_transmission_chain": "Brass Encased Transmission Chain",
+  "block.createtransfer.transmission_chain": "Transmission Chain",
+  "creativeTab.createtransfer.main": "Create: Transfer"
 }
