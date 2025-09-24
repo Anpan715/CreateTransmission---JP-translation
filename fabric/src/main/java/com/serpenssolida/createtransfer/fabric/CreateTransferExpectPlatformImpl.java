@@ -4,7 +4,8 @@ import net.fabricmc.loader.api.FabricLoader;
 
 public class CreateTransferExpectPlatformImpl
 {
-	public static String platformName() {
+	public static String platformName()
+	{
 		return FabricLoader.getInstance().isModLoaded("quilt_loader") ? "Quilt" : "Fabric";
 	}
 }

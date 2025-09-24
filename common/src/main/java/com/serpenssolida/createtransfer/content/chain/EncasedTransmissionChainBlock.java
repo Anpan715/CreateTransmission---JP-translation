@@ -1,14 +1,11 @@
-package com.serpenssolida.createtransfer.blocks.chain;
+package com.serpenssolida.createtransfer.content.chain;
 
 
-import com.serpenssolida.createtransfer.CreateTransfer;
 import com.serpenssolida.createtransfer.CreateTransferBlocks;
 import com.simibubi.create.AllBlocks;
-import com.simibubi.create.Create;
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.content.decoration.encasing.EncasedBlock;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
-import com.simibubi.create.content.kinetics.base.RotatedPillarKineticBlock;
 import com.simibubi.create.content.schematics.requirement.ISpecialBlockItemRequirement;
 import com.simibubi.create.content.schematics.requirement.ItemRequirement;
 import com.tterrag.registrate.util.entry.BlockEntry;

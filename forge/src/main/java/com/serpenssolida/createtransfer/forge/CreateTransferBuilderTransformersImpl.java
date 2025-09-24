@@ -1,33 +1,26 @@
 package com.serpenssolida.createtransfer.forge;
 
-import com.serpenssolida.createtransfer.blocks.chain.AbstractTransmissionChainBlock;
-import com.serpenssolida.createtransfer.blocks.chain.TransmissionChainBlock;
-import com.simibubi.create.AllBlocks;
+import com.serpenssolida.createtransfer.content.chain.AbstractTransmissionChainBlock;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ChainConnection;
 import com.simibubi.create.Create;
-import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.tterrag.registrate.builders.BlockBuilder;
-import com.tterrag.registrate.builders.ItemBuilder;
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
 import com.tterrag.registrate.providers.RegistrateItemModelProvider;
-import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
 import net.minecraft.core.Direction;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
-import org.openjdk.nashorn.internal.ir.CallNode;
+
+import static com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.*;
 
 public class CreateTransferBuilderTransformersImpl
 {
-	public static <T extends Block> void transmissionChain(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov, String casing, boolean uvLock)
+	public static <T extends Block> void encasedTransmissionChain(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov, String casing)
 	{
 		String path = "block/transmission_chain/encased/";
 		VariantBlockStateBuilder variantBuilder = prov.getVariantBuilder(ctx.getEntry());
@@ -36,20 +29,17 @@ public class CreateTransferBuilderTransformersImpl
 		{
 			Direction facing = state.getValue(AbstractTransmissionChainBlock.FACING);
 			boolean isHorizontal = facing.getAxis().isHorizontal();
-			int zRot = isHorizontal ? 0 : (facing == Direction.UP ? 270 : 90);
-			AbstractTransmissionChainBlock.ChainSide side;
+			int zRot = isHorizontal ? 0 : (facing.equals(Direction.UP) ? 270 : 90);
 			String modelTypePath = "";
 			String sidePath = "";
 
 			if (AbstractTransmissionChainBlock.isConnected(state))
 			{
-				side = AbstractTransmissionChainBlock.getFirstConnectionSide(state);
-				AbstractTransmissionChainBlock.ConnectionType connectionType = AbstractTransmissionChainBlock.getConnection(state, side);
+				ChainConnection connection = AbstractTransmissionChainBlock.getFirstConnection(state);
 				
-				modelTypePath = connectionType == AbstractTransmissionChainBlock.ConnectionType.CHAIN ? "_connected" : "_belt";
-				sidePath = "_" + side.toString().toLowerCase();
+				modelTypePath = connection.type() == ConnectionType.CHAIN ? "_connected" : "_belt";
+				sidePath = "_" + connection.side().toString().toLowerCase();
 			}
-
 
 			ModelFile.ExistingModelFile modelFile = prov.models().getExistingFile(prov.modLoc(path + casing + "_encased_chain" + modelTypePath + sidePath));
 
@@ -57,6 +47,7 @@ public class CreateTransferBuilderTransformersImpl
 								  .rotationY((int) (facing.toYRot() - 180) - (!isHorizontal ? 90 : 0))
 								  .rotationX(zRot)
 								  .modelFile(modelFile)
+								  .uvLock(true)
 								  .build();
 
 		}, AbstractTransmissionChainBlock.WATERLOGGED);

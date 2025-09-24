@@ -1,14 +1,14 @@
 package com.serpenssolida.createtransfer;
 
-import com.serpenssolida.createtransfer.blocks.chain.EncasedTransmissionChainBlock;
-import com.serpenssolida.createtransfer.blocks.chain.TransmissionChainBlock;
+import com.serpenssolida.createtransfer.content.chain.EncasedTransmissionChainBlock;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainBlock;
 import com.simibubi.create.AllTags.AllBlockTags;
 import com.simibubi.create.content.decoration.encasing.EncasingRegistry;
 import com.simibubi.create.content.kinetics.BlockStressDefaults;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.world.level.material.PushReaction;
 
-import static com.serpenssolida.createtransfer.CreateTransferBuilderTransformers.transmissionChain;
+import static com.serpenssolida.createtransfer.CreateTransferBuilderTransformers.encasedTransmissionChain;
 import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 
 public class CreateTransferBlocks
@@ -40,7 +40,7 @@ public class CreateTransferBlocks
 			.transform(BlockStressDefaults.setNoImpact())
 			.transform(axeOrPickaxe())
 			.transform(EncasingRegistry.addVariantTo(TRANSMISSION_CHAIN))
-			.blockstate((c, p) -> transmissionChain(c, p, "andesite", true))
+			.blockstate((c, p) -> encasedTransmissionChain(c, p, "andesite"))
 			.register();
 
 	public static final BlockEntry<EncasedTransmissionChainBlock> BRASS_ENCASED_TRANSMISSION_CHAIN = CreateTransfer.REGISTRATE
@@ -51,15 +51,17 @@ public class CreateTransferBlocks
 			.transform(BlockStressDefaults.setNoImpact())
 			.transform(axeOrPickaxe())
 			.transform(EncasingRegistry.addVariantTo(TRANSMISSION_CHAIN))
-			.blockstate((c, p) -> transmissionChain(c, p, "brass", true))
+			.blockstate((c, p) -> encasedTransmissionChain(c, p, "brass"))
 			.register();
 
 
 	private CreateTransferBlocks() {}
 
+	/**
+	 * Initializes the class static fields.
+	 */
 	public static void init()
 	{
-		// load the class and register everything
 		CreateTransfer.LOGGER.info("Registering blocks for " + CreateTransfer.NAME);
 	}
 

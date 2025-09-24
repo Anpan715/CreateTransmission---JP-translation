@@ -1,8 +1,7 @@
 package com.serpenssolida.createtransfer;
 
-import com.serpenssolida.createtransfer.blocks.chain.TransmissionChainBlockEntity;
-import com.serpenssolida.createtransfer.blocks.chain.TransmissionChainInstance;
-import com.simibubi.create.content.kinetics.base.KineticBlockEntityRenderer;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainBlockEntity;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainInstance;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
 
 public class CreateTransferBlockEntities
@@ -11,16 +10,15 @@ public class CreateTransferBlockEntities
 			.blockEntity("transmission_chain", TransmissionChainBlockEntity::new)
 			.instance(() -> TransmissionChainInstance::new, true)
 			.validBlocks(CreateTransferBlocks.TRANSMISSION_CHAIN, CreateTransferBlocks.ANDESITE_ENCASED_TRANSMISSION_CHAIN, CreateTransferBlocks.BRASS_ENCASED_TRANSMISSION_CHAIN)
-			//.renderer(() -> KineticBlockEntityRenderer::new)
 			.register();
 
-	private CreateTransferBlockEntities()
-	{
-	}
+	private CreateTransferBlockEntities() {}
 
+	/**
+	 * Initializes the class static fields.
+	 */
 	public static void init()
 	{
-		// load the class and register everything
-		CreateTransfer.LOGGER.info("Registering blocks for " + CreateTransfer.NAME);
+		CreateTransfer.LOGGER.info("Registering blocks entities for " + CreateTransfer.NAME);
 	}
 }

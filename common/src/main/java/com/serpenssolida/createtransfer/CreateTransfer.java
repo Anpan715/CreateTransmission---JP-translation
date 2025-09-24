@@ -1,6 +1,6 @@
 package com.serpenssolida.createtransfer;
 
-import com.serpenssolida.createtransfer.blocks.chain.AbstractTransmissionChainBlock;
+import com.serpenssolida.createtransfer.content.chain.AbstractTransmissionChainBlock;
 import com.simibubi.create.content.contraptions.BlockMovementChecks;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.resources.ResourceLocation;
@@ -17,6 +17,9 @@ public class CreateTransfer
 
     CreateTransfer() {}
 
+    /**
+     * Initializes mod content.
+     */
     public static void init()
     {
         CreateTransferCreativeTabs.init();
@@ -27,11 +30,18 @@ public class CreateTransfer
         CreateTransferBlocks.init();
         CreateTransferBlockEntities.init();
 
+        //Check used when glue is applied to transmission chain.
         BlockMovementChecks.registerAttachedCheck((state, world, pos, direction) ->
 				state.getBlock() instanceof AbstractTransmissionChainBlock chain && chain.hasShaftTowards(world, pos, state, direction) ? BlockMovementChecks.CheckResult.SUCCESS : BlockMovementChecks.CheckResult.FAIL);
 
     }
 
+    /**
+     * Creates a new {@link ResourceLocation} with the given path.
+     * @param path The path of the resource.
+     *
+     * @return the {@link ResourceLocation} with the given path.
+     */
 	public static ResourceLocation asResource(String path)
     {
         return new ResourceLocation(MOD_ID, path);

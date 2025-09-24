@@ -1,22 +1,18 @@
-package com.serpenssolida.createtransfer.blocks.chain;
+package com.serpenssolida.createtransfer.content.chain;
 
-import com.google.common.collect.BiMap;
 import com.google.common.collect.ImmutableBiMap;
-import com.serpenssolida.createtransfer.CreateTransfer;
 import com.serpenssolida.createtransfer.CreateTransferBlockEntities;
 import com.serpenssolida.createtransfer.CreateTransferBlocks;
-import com.serpenssolida.createtransfer.CreateTransferShapes;
-import com.simibubi.create.AllShapes;
-import com.simibubi.create.content.contraptions.BlockMovementChecks;
-import com.simibubi.create.content.contraptions.glue.SuperGlueHandler;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ChainConnection;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ChainDirection;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ChainSide;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ConnectionType;
 import com.simibubi.create.content.kinetics.base.KineticBlock;
-import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import com.simibubi.create.content.kinetics.belt.BeltBlock;
 import com.simibubi.create.content.kinetics.belt.BeltBlockEntity;
 import com.simibubi.create.foundation.block.IBE;
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 import com.simibubi.create.foundation.utility.Lang;
-import com.simibubi.create.foundation.utility.VoxelShaper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
@@ -43,14 +39,10 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Arrays;
-import java.util.EnumMap;
 import java.util.List;
-import java.util.Map;
 
 import static com.serpenssolida.createtransfer.CreateTransferShapes.*;
 
@@ -61,50 +53,6 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	public static final EnumProperty<ConnectionType> CONNECTION_RIGHT = EnumProperty.create("right", ConnectionType.class);
 	public static final EnumProperty<ConnectionType> CONNECTION_BOTTOM = EnumProperty.create("bottom", ConnectionType.class);
 	public static final EnumProperty<ConnectionType> CONNECTION_LEFT = EnumProperty.create("left", ConnectionType.class);
-	private static final Map<Direction, BiMap<ChainSide, Direction>> DIRECTION_NEIGHBOR;
-
-	static
-	{
-		DIRECTION_NEIGHBOR = new EnumMap<>(Direction.class);
-		DIRECTION_NEIGHBOR.put(Direction.UP, ImmutableBiMap.of(
-				ChainSide.TOP, Direction.SOUTH,
-				ChainSide.RIGHT, Direction.EAST,
-				ChainSide.BOTTOM, Direction.NORTH,
-				ChainSide.LEFT, Direction.WEST
-		));
-		DIRECTION_NEIGHBOR.put(Direction.DOWN, ImmutableBiMap.of(
-				ChainSide.TOP, Direction.NORTH,
-				ChainSide.RIGHT, Direction.EAST,
-				ChainSide.BOTTOM, Direction.SOUTH,
-				ChainSide.LEFT, Direction.WEST
-		));
-		DIRECTION_NEIGHBOR.put(Direction.NORTH, ImmutableBiMap.of(
-				ChainSide.TOP, Direction.UP,
-				ChainSide.RIGHT, Direction.EAST,
-				ChainSide.BOTTOM, Direction.DOWN,
-				ChainSide.LEFT, Direction.WEST
-		));
-		DIRECTION_NEIGHBOR.put(Direction.EAST, ImmutableBiMap.of(
-				ChainSide.TOP, Direction.UP,
-				ChainSide.RIGHT, Direction.SOUTH,
-				ChainSide.BOTTOM, Direction.DOWN,
-				ChainSide.LEFT, Direction.NORTH
-		));
-		DIRECTION_NEIGHBOR.put(Direction.SOUTH, ImmutableBiMap.of(
-				ChainSide.TOP, Direction.UP,
-				ChainSide.RIGHT, Direction.WEST,
-				ChainSide.BOTTOM, Direction.DOWN,
-				ChainSide.LEFT, Direction.EAST
-		));
-		DIRECTION_NEIGHBOR.put(Direction.WEST, ImmutableBiMap.of(
-				ChainSide.TOP, Direction.UP,
-				ChainSide.RIGHT, Direction.NORTH,
-				ChainSide.BOTTOM, Direction.DOWN,
-				ChainSide.LEFT, Direction.SOUTH
-		));
-
-		//CONNECTION_MAP = ImmutableBiMap.of(ChainSide.TOP, CONNECTION_TOP, ChainSide.RIGHT, CONNECTION_RIGHT, ChainSide.BOTTOM, CONNECTION_BOTTOM, ChainSide.LEFT, CONNECTION_LEFT);
-	}
 
 	protected AbstractTransmissionChainBlock(Properties properties)
 	{
@@ -161,16 +109,46 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	}
 
 	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext)
+	{
+		ChainConnection connection = getFirstConnection(state);
+		Direction facing = state.getValue(FACING);
+
+		if (connection.side() == null)
+			return CHAIN.get(facing);
+
+		if (connection.type() == ConnectionType.CHAIN)
+			return switch (connection.side())
+			{
+				case TOP -> CHAIN_CONNECTED_TOP.get(facing);
+				case RIGHT -> CHAIN_CONNECTED_RIGHT.get(facing);
+				case BOTTOM -> CHAIN_CONNECTED_BOTTOM.get(facing);
+				case LEFT -> CHAIN_CONNECTED_LEFT.get(facing);
+			};
+		else if (connection.type() == ConnectionType.BELT)
+			return switch (connection.side())
+			{
+				case TOP -> CHAIN_BELT_TOP.get(facing);
+				case RIGHT -> CHAIN_BELT_RIGHT.get(facing);
+				case BOTTOM -> CHAIN_BELT_BOTTOM.get(facing);
+				case LEFT -> CHAIN_BELT_LEFT.get(facing);
+			};
+
+		return CHAIN.get(facing);
+	}
+
+	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context)
 	{
+		//Face the clicked block.
 		BlockPos clickedPos = context.getClickedPos();
 		Direction facing = context.getClickedFace().getOpposite();
-		BlockState state = defaultBlockState()
-				.setValue(FACING, facing);
+		BlockState state = defaultBlockState().setValue(FACING, facing);
 
 		//Handle waterlogging.
 		state = withWater(state, context);
 
+		//Update the state.
 		return updateState(state, clickedPos, context.getLevel());
 	}
 
@@ -188,80 +166,95 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 		return newState;
 	}
 
+	/**
+	 * Updates the state according to surrounding blocks.
+	 * @param state state that will get updated.
+	 * @param pos location of the block.
+	 * @param world the world the block is in.
+	 *
+	 * @return the new updated state.
+	 */
 	private BlockState updateState(BlockState state, BlockPos pos, LevelAccessor world)
 	{
-		Direction facing = state.getValue(FACING);
-
 		boolean wasConnected = isConnected(state);
 
-		for (ChainSide side : ChainSide.values())
+		if (wasConnected)
 		{
-			BlockPos neighbourPos = pos.offset(AbstractTransmissionChainBlock.getDirectionFromSide(facing, side).getNormal());
-			BlockEntity neighbourEntity = world.getBlockEntity(neighbourPos);
-			ConnectionType connection = AbstractTransmissionChainBlock.getConnectionType(world, pos, state, side, neighbourEntity);
+			//Get the connection and update it if was removed.
+			ChainConnection oldConnection = getFirstConnection(state);
+			ConnectionType connection = queryWorldForConnection(world, pos, state, oldConnection.side());
 
-			if (!wasConnected && connection != ConnectionType.NONE)
-			{
-				state = state.setValue(side.property, connection);
-				break;
-			}
+			if (connection == ConnectionType.NONE)
+				state = state.setValue(oldConnection.side().property, connection);
 
-			if (wasConnected && connection == ConnectionType.NONE)
-				state = state.setValue(side.property, connection);
+			return state;
 		}
+
+		//Try to find a new connection and update it if found.
+		ChainConnection firstConnection = findFirstConnection(world, pos, state);
+
+		if (firstConnection.side() != null && firstConnection.type() != ConnectionType.NONE)
+			state = state.setValue(firstConnection.side().property, firstConnection.type());
 
 		return state;
 	}
 
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext)
+	/**
+	 * Finds the first connection available to the chain by querying the world for block.
+	 * @param world the world the bloc is in.
+	 * @param pos location of the block.
+	 * @param state current state of the block.
+	 *
+	 * @return the connection if one is found.
+	 */
+	private static ChainConnection findFirstConnection(LevelAccessor world, BlockPos pos, BlockState state)
 	{
-		ChainSide side = getFirstConnectionSide(state);
-		var connection = getConnection(state, side);
-		final Direction facing = state.getValue(FACING);
+		//Check all side for a connection.
+		for (ChainSide side : ChainSide.values())
+		{
+			//Get connection type.
+			ConnectionType connection = queryWorldForConnection(world, pos, state, side);
 
-		if (side == null)
-			return CHAIN.get(facing);
+			//The block was connected and a type has been lost.
+			if (connection != ConnectionType.NONE)
+				return new ChainConnection(side, connection);
+		}
 
-		if (connection == ConnectionType.CHAIN)
-			return switch (side)
-			{
-				case TOP -> CHAIN_CONNECTED_TOP.get(facing);
-				case RIGHT -> CHAIN_CONNECTED_RIGHT.get(facing);
-				case BOTTOM -> CHAIN_CONNECTED_BOTTOM.get(facing);
-				case LEFT -> CHAIN_CONNECTED_LEFT.get(facing);
-			};
-		else if (connection == ConnectionType.BELT)
-			return switch (side)
-			{
-				case TOP -> CHAIN_BELT_TOP.get(facing);
-				case RIGHT -> CHAIN_BELT_RIGHT.get(facing);
-				case BOTTOM -> CHAIN_BELT_BOTTOM.get(facing);
-				case LEFT -> CHAIN_BELT_LEFT.get(facing);
-			};
-
-		return CHAIN.get(facing);
+		return new ChainConnection(null, ConnectionType.NONE);
 	}
 
-	private static ConnectionType getConnectionType(LevelAccessor world, BlockPos pos, BlockState state, ChainSide side, BlockEntity otherEntity)
+	/**
+	 * Finds the connection type by querying the world for block on the given side.
+	 * @param world the world the block is in.
+	 * @param pos location of the block.
+	 * @param state current state of the block.
+	 * @param side the side of the connection.
+	 *
+	 * @return the connection type on the given side.
+	 */
+	private static ConnectionType queryWorldForConnection(LevelAccessor world, BlockPos pos, BlockState state, ChainSide side)
 	{
-		Direction facing = state.getValue(FACING);
-		if (otherEntity == null)
+		ChainDirection facing = ChainDirection.of(state.getValue(FACING));
+		BlockPos neighbourPos = pos.offset(facing.getDirectionFromSide(side).getNormal());
+		BlockEntity neighbourEntity = world.getBlockEntity(neighbourPos);
+
+		if (neighbourEntity == null)
 			return ConnectionType.NONE;
 
-		BlockState otherState = otherEntity.getBlockState();
+		BlockState neighbourState = neighbourEntity.getBlockState();
 
-		if (otherEntity instanceof TransmissionChainBlockEntity chainEntity)
+		if (neighbourEntity instanceof TransmissionChainBlockEntity chainEntity)
 		{
-			ConnectionType otherConnection = otherState.getValue(ChainSide.opposite(side).property);
-			if (otherState.getValue(FACING) == facing && ((otherConnection == ConnectionType.CHAIN && chainEntity.isConnected()) || (otherConnection == ConnectionType.NONE && !chainEntity.isConnected())))
+			ConnectionType otherConnection = neighbourState.getValue(ChainSide.opposite(side).property);
+			if (facing.direction == neighbourState.getValue(FACING) && ((otherConnection == ConnectionType.CHAIN && chainEntity.isConnected()) || (otherConnection == ConnectionType.NONE && !chainEntity.isConnected())))
 				return ConnectionType.CHAIN;
 		}
-		else if (otherEntity instanceof BeltBlockEntity)
+		else if (neighbourEntity instanceof BeltBlockEntity)
 		{
-			BeltBlock belt = (BeltBlock) otherState.getBlock();
-			Direction toBelt = getDirectionFromSide(facing, side);
-			boolean hasShaftTowards = belt.hasShaftTowards(world, pos.offset(toBelt.getNormal()), otherEntity.getBlockState(), toBelt.getOpposite());
+			BeltBlock belt = (BeltBlock) neighbourState.getBlock();
+			Direction directionBeltToChain = facing.getDirectionFromSide(side).getOpposite();
+
+			boolean hasShaftTowards = belt.hasShaftTowards(world, neighbourPos, neighbourState, directionBeltToChain);
 
 			if (hasShaftTowards)
 				return ConnectionType.BELT;
@@ -270,16 +263,34 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 		return ConnectionType.NONE;
 	}
 
-	public static Direction getDirectionFromSide(Direction facing, ChainSide side)
+	/**
+	 * Gets the first available connection from the block state. It does not query the world for neighbour blocks.
+	 * @param state the state of the block.
+	 *
+	 * @return a {@link ChainConnection} representing the first available connection. If none was found ChainConnection.side will be null.
+	 */
+	public static ChainConnection getFirstConnection(BlockState state)
 	{
-		return DIRECTION_NEIGHBOR.get(facing).get(side);
+		if (!isConnected(state))
+			return new ChainConnection(null, ConnectionType.NONE);
+
+		for (ChainSide side : ChainSide.values())
+		{
+			ConnectionType connection = AbstractTransmissionChainBlock.getConnection(state, side);
+			if (connection != ConnectionType.NONE)
+				return new ChainConnection(side, connection);
+		}
+
+		return new ChainConnection(null, ConnectionType.NONE);
 	}
 
-	public static ChainSide getSideFromDirection(Direction facing, Direction direction)
-	{
-		return DIRECTION_NEIGHBOR.get(facing).inverse().get(direction);
-	}
-
+	/**
+	 * Gets the connection type on the given side from the block state. It does not query the world for neighbour blocks.
+	 * @param state the state of the block.
+	 * @param side the side of the block.
+	 *
+	 * @return a {@link ConnectionType} representing the connection type.
+	 */
 	public static ConnectionType getConnection(BlockState state, ChainSide side)
 	{
 		if (!(state.getBlock() instanceof AbstractTransmissionChainBlock))
@@ -291,20 +302,12 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 		return state.getValue(side.property);
 	}
 
-	public static ChainSide getFirstConnectionSide(BlockState state)
-	{
-		if (!isConnected(state))
-			return null;
-
-		for (ChainSide side : ChainSide.values())
-		{
-			if (AbstractTransmissionChainBlock.getConnection(state, side) != ConnectionType.NONE)
-				return side;
-		}
-
-		return null;
-	}
-
+	/**
+	 * Checks if the given state represents a chain that is connected. It does not query the world for neighbour blocks.
+	 * @param state state of the block.
+	 *
+	 * @return true if in the given state the chain is connected, false otherwise.
+	 */
 	public static boolean isConnected(BlockState state)
 	{
 		return state.getValue(AbstractTransmissionChainBlock.CONNECTION_TOP) != ConnectionType.NONE ||
@@ -316,7 +319,10 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	@Override
 	protected boolean areStatesKineticallyEquivalent(BlockState oldState, BlockState newState)
 	{
-		return super.areStatesKineticallyEquivalent(oldState, newState) && getFirstConnectionSide(oldState) == getFirstConnectionSide(newState);
+		ChainConnection oldConnection = getFirstConnection(oldState);
+		ChainConnection newConnection = getFirstConnection(newState);
+
+		return super.areStatesKineticallyEquivalent(oldState, newState) && oldConnection.equals(newConnection);
 	}
 
 	@Override
@@ -345,6 +351,13 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 		return state;
 	}
 
+	/**
+	 * Mirrors the sides inside the state by switching their values accordingly.
+	 * @param state the state of the block.
+	 * @param mirror the mirror operation.
+	 *
+	 * @return the state with mirrored sides.
+	 */
 	private BlockState mirrorSide(BlockState state, Mirror mirror)
 	{
 		Direction facing = state.getValue(FACING);
@@ -379,6 +392,13 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 		return state;
 	}
 
+	/**
+	 * Rotates the sides inside the state by switching their values accordingly.
+	 * @param state the state of the block.
+	 * @param rotation the rotation operation.
+	 *
+	 * @return the state with rotated sides.
+	 */
 	private static BlockState rotateSides(BlockState state, Rotation rotation)
 	{
 		Direction facing = state.getValue(FACING);
@@ -410,12 +430,12 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	@Override
 	public boolean hasShaftTowards(LevelReader world, BlockPos pos, BlockState state, Direction direction)
 	{
-		Direction facing = state.getValue(FACING);
+		ChainDirection facing = ChainDirection.of(state.getValue(FACING));
 
-		if (facing == direction)
+		if (facing.direction == direction)
 			return true;
 
-		ChainSide side = AbstractTransmissionChainBlock.getSideFromDirection(facing, direction);
+		ChainSide side = facing.getSideFromDirection(direction);
 		ConnectionType connection = AbstractTransmissionChainBlock.getConnection(state, side);
 
 		return connection != ConnectionType.NONE;
@@ -437,66 +457,5 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	public BlockEntityType<? extends TransmissionChainBlockEntity> getBlockEntityType()
 	{
 		return CreateTransferBlockEntities.TRANSMISSION_CHAIN.get();
-	}
-
-	public enum ConnectionType implements StringRepresentable
-	{
-		NONE, CHAIN, BELT;
-
-		@Override
-		public String getSerializedName()
-		{
-			return Lang.asId(name());
-		}
-	}
-
-	public enum ChainSide implements StringRepresentable
-	{
-		TOP(Math.PI * 0.5, CONNECTION_TOP), RIGHT(0, CONNECTION_RIGHT), BOTTOM(Math.PI * 1.5, CONNECTION_BOTTOM), LEFT(Math.PI, CONNECTION_LEFT);
-
-		final double rotationAngle;
-		final EnumProperty<ConnectionType> property;
-
-		ChainSide(double rotationAngle, EnumProperty<ConnectionType> property)
-		{
-			this.rotationAngle = rotationAngle;
-			this.property = property;
-		}
-
-		@Override
-		public String getSerializedName()
-		{
-			return Lang.asId(name());
-
-		}
-
-		public static ChainSide opposite(ChainSide side)
-		{
-			return switch (side)
-			{
-				case TOP -> BOTTOM;
-				case RIGHT -> LEFT;
-				case BOTTOM -> TOP;
-				case LEFT -> RIGHT;
-			};
-		}
-
-		public static ChainSide rotate(ChainSide side, Rotation rotation)
-		{
-			if (rotation == Rotation.NONE)
-				return side;
-			else if (rotation == Rotation.COUNTERCLOCKWISE_90)
-				return rotate(ChainSide.opposite(side), Rotation.CLOCKWISE_90);
-			else if (rotation == Rotation.CLOCKWISE_180)
-				return opposite(side);
-
-			return switch (side)
-			{
-				case TOP -> RIGHT;
-				case RIGHT -> BOTTOM;
-				case BOTTOM -> LEFT;
-				case LEFT -> TOP;
-			};
-		}
 	}
 }

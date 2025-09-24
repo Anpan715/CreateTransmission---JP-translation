@@ -1,43 +1,47 @@
 package com.serpenssolida.createtransfer;
 
-import com.simibubi.create.AllShapes;
 import com.simibubi.create.foundation.utility.VecHelper;
 import com.simibubi.create.foundation.utility.VoxelShaper;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.apache.commons.lang3.mutable.MutableObject;
 
-import java.util.function.BiFunction;
-
-import static net.minecraft.core.Direction.UP;
-
 public class CreateTransferShapes
 {
-	private CreateTransferShapes(){}
+	private CreateTransferShapes() {}
 
-//	private static final VoxelShape SHAPE_CHAIN = box(new Vec3(4, 14, 4), new Vec3(12, 16, 12));
+	//Base chain shapes.
 	private static final VoxelShape SHAPE_CHAIN = box(new Vec3(5, 5, 0), new Vec3(11, 11, 2));
-//	private static final VoxelShape SHAPE_CHAIN_CONNECTED = box(new Vec3(0, 14, 4), new Vec3(12, 16, 12));
 	private static final VoxelShape SHAPE_CHAIN_CONNECTED = box(new Vec3(5, 5, 0), new Vec3(16, 11, 2));
 	private static final VoxelShape SHAPE_CHAIN_BELT = Shapes.or(SHAPE_CHAIN_CONNECTED, rotated(SHAPE_CHAIN_CONNECTED, new Vec3(180, 90, 0)));
 
+	//Chain
 	public static final VoxelShaper CHAIN = new Builder(SHAPE_CHAIN).forDirectional();
 
+	//Chain connected to another chain.
 	public static final VoxelShaper CHAIN_CONNECTED_RIGHT = new Builder(SHAPE_CHAIN_CONNECTED).forDirectional();
 	public static final VoxelShaper CHAIN_CONNECTED_BOTTOM = new Builder(rotated(SHAPE_CHAIN_CONNECTED, new Vec3(0, 0, 270))).forDirectional();
 	public static final VoxelShaper CHAIN_CONNECTED_LEFT = new Builder(rotated(SHAPE_CHAIN_CONNECTED, new Vec3(0, 0, 180))).forDirectional();
 	public static final VoxelShaper CHAIN_CONNECTED_TOP = new Builder(rotated(SHAPE_CHAIN_CONNECTED, new Vec3(0, 0, 90))).forDirectional();
 
+	//Chain connected to a belt.
 	public static final VoxelShaper CHAIN_BELT_RIGHT = new Builder(SHAPE_CHAIN_BELT).forDirectional();
 	public static final VoxelShaper CHAIN_BELT_BOTTOM = new Builder(rotated(SHAPE_CHAIN_BELT, new Vec3(0, 0, 270))).forDirectional();
 	public static final VoxelShaper CHAIN_BELT_LEFT = new Builder(rotated(SHAPE_CHAIN_BELT, new Vec3(0, 0, 180))).forDirectional();
 	public static final VoxelShaper CHAIN_BELT_TOP = new Builder(rotated(SHAPE_CHAIN_BELT, new Vec3(0, 0, 90))).forDirectional();
 
 
+	/**
+	 * Rotates the given {@link VoxelShape} around the given axes rotation.
+	 *
+	 * @param shape the shape to rotate.
+	 * @param rotation angles of the rotation in degrees.
+	 *
+	 * @return the rotated shape.
+	 */
 	protected static VoxelShape rotated(VoxelShape shape, Vec3 rotation)
 	{
 		if (rotation.equals(Vec3.ZERO))
@@ -70,6 +74,15 @@ public class CreateTransferShapes
 		return result.getValue();
 	}
 
+	/**
+	 * Wrapper for the function Block.box() that uses two Vec3 instead of triplets of floats.
+	 * Creates a new box shape.
+	 *
+	 * @param v1 first corner of the box.
+	 * @param v2 second corner of the box.
+	 *
+	 * @return a box defined by the given corners.
+	 */
 	protected static VoxelShape box(Vec3 v1, Vec3 v2)
 	{
 		return Block.box(
@@ -81,40 +94,48 @@ public class CreateTransferShapes
 				Math.max(v1.z, v2.z));
 	}
 
+	/**
+	 * Builder used to easily create shape and variants for a given {@link VoxelShape}.
+	 */
 	public static class Builder
 	{
 		private VoxelShape shape;
 
-		public Builder(VoxelShape shape) {
+		/**
+		 * Creates a new builder with the given shape.
+		 * @param shape the shape for the builder.
+		 */
+		public Builder(VoxelShape shape)
+		{
 			this.shape = shape;
 		}
 
-		public Builder add(VoxelShape shape) {
+		/**
+		 * Merges the given shape with the builder shape.
+		 * @param shape the shape to merge
+		 *
+		 * @return the builder for method chaining.
+		 */
+		public Builder add(VoxelShape shape)
+		{
 			this.shape = Shapes.or(this.shape, shape);
 			return this;
 		}
 
-		/*public Builder add(double x1, double y1, double z1, double x2, double y2, double z2) {
-			return add(cuboid(x1, y1, z1, x2, y2, z2));
-		}
-
-		public Builder erase(double x1, double y1, double z1, double x2, double y2, double z2) {
-			this.shape = Shapes.join(shape, cuboid(x1, y1, z1, x2, y2, z2), BooleanOp.ONLY_FIRST);
-			return this;
-		}*/
-
-		public VoxelShape build() {
+		/**
+		 * Finalizes shape building.
+		 * @return the result of the builder.
+		 */
+		public VoxelShape build()
+		{
 			return shape;
 		}
 
-		public VoxelShaper build(BiFunction<VoxelShape, Direction, VoxelShaper> factory, Direction direction) {
-			return factory.apply(shape, direction);
-		}
-
-		public VoxelShaper build(BiFunction<VoxelShape, Direction.Axis, VoxelShaper> factory, Direction.Axis axis) {
-			return factory.apply(shape, axis);
-		}
-
+		/**
+		 * Creates a {@link VoxelShaper} with directional rotation of the shape.
+		 *
+		 * @return a voxel shaper containing all directional variant of the shape.
+		 */
 		public VoxelShaper forDirectional()
 		{
 			return new VoxelShaper().withShape(shape, Direction.NORTH)
@@ -123,12 +144,6 @@ public class CreateTransferShapes
 									.withShape(rotated(shape, new Vec3(0, 90, 0)), Direction.WEST)
 									.withShape(rotated(shape, new Vec3(90, 0, 0)), Direction.UP)
 									.withShape(rotated(shape, new Vec3(270, 0, 0)), Direction.DOWN);
-			//return build(VoxelShaper::forDirectional, direction);
 		}
-
-		/*public VoxelShaper forDirectional() {
-			return forDirectional(UP);
-		}*/
-
 	}
 }

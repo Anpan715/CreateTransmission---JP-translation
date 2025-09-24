@@ -1,7 +1,8 @@
-package com.serpenssolida.createtransfer.blocks.chain;
+package com.serpenssolida.createtransfer.content.chain;
 
-import com.serpenssolida.createtransfer.blocks.chain.AbstractTransmissionChainBlock.ChainSide;
-import com.serpenssolida.createtransfer.blocks.chain.AbstractTransmissionChainBlock.ConnectionType;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ChainDirection;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ChainSide;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ConnectionType;
 import com.simibubi.create.content.kinetics.transmission.SplitShaftBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,12 +32,12 @@ public class TransmissionChainBlockEntity extends SplitShaftBlockEntity
 		if (!hasSource())
 			return 1;
 
-		Direction facing = getBlockState().getValue(TransmissionChainBlock.FACING);
+		ChainDirection facing = ChainDirection.of(getBlockState().getValue(TransmissionChainBlock.FACING));
 
 		//Edge case when connected to adjacent belt.
-		if (isConnected() && face != facing)
+		if (isConnected() && facing.direction != face)
 		{
-			ChainSide side = TransmissionChainBlock.getSideFromDirection(facing, face);
+			ChainSide side = facing.getSideFromDirection(face);
 			ConnectionType connectionType = TransmissionChainBlock.getConnection(getBlockState(), side);
 
 			if (connectionType == ConnectionType.BELT)

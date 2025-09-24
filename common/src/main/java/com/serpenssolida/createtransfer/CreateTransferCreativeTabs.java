@@ -1,5 +1,6 @@
 package com.serpenssolida.createtransfer;
 
+import com.jozufozu.flywheel.core.PartialModel;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -20,26 +21,47 @@ public class CreateTransferCreativeTabs
 
 	private CreateTransferCreativeTabs(){}
 
+	/**
+	 * Initializes the class static fields.
+	 */
+	public static void init()
+	{
+		CreateTransfer.REGISTRATE.addRawLang("creativeTab." + CreateTransfer.MOD_ID + ".main", "Create: Transfer");
+		CreateTransfer.LOGGER.info("Loading creative tabs for " + CreateTransfer.NAME);
+	}
+
+	/**
+	 * Creates a new tab with the given id and registers it.
+	 * @param id the id of the tab.
+	 * @param sup the tab to register.
+	 *
+	 * @return the newly created tab.
+	 */
 	@ExpectPlatform
 	public static Supplier<CreativeModeTab> registerTab(String id, Supplier<CreativeModeTab> sup)
 	{
 		throw new AssertionError();
 	}
 
+	/**
+	 * Instantiates a new builder for a creative tab.
+	 *
+	 * @return the builder.
+	 */
 	@ExpectPlatform
 	public static CreativeModeTab.Builder createBuilder()
 	{
 		throw new AssertionError();
 	}
 
+	/**
+	 * Set the current creative tab of the registrate to the tab with the given key.
+	 *
+	 * @param key the key of the new tab.
+	 */
 	@ExpectPlatform
 	public static void setTab(ResourceKey<CreativeModeTab> key)
 	{
 		throw new AssertionError();
-	}
-
-	public static void init()
-	{
-		CreateTransfer.REGISTRATE.addRawLang("creativeTab." + CreateTransfer.MOD_ID + ".main", "Create: Transfer");
 	}
 }

@@ -1,24 +1,23 @@
-package com.serpenssolida.createtransfer.blocks.chain;
+package com.serpenssolida.createtransfer.content.chain;
 
 import com.jozufozu.flywheel.api.InstanceData;
 import com.jozufozu.flywheel.api.Instancer;
 import com.jozufozu.flywheel.api.Material;
 import com.jozufozu.flywheel.api.MaterialManager;
-import com.jozufozu.flywheel.core.Materials;
 import com.jozufozu.flywheel.core.PartialModel;
-import com.jozufozu.flywheel.core.materials.oriented.OrientedData;
 import com.serpenssolida.createtransfer.CreateTransferModels;
 import com.serpenssolida.createtransfer.CreateTransferSpriteShifts;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ChainConnection;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ChainDirection;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ChainSide;
+import com.serpenssolida.createtransfer.content.chain.TransmissionChainHelpers.ConnectionType;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntityInstance;
 import com.simibubi.create.content.kinetics.base.flwdata.BeltData;
 import com.simibubi.create.content.kinetics.base.flwdata.RotatingData;
 import com.simibubi.create.foundation.block.render.SpriteShiftEntry;
 import com.simibubi.create.foundation.render.AllMaterialSpecs;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.LightLayer;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
@@ -29,82 +28,51 @@ public class TransmissionChainInstance extends KineticBlockEntityInstance<Transm
 {
 	protected final EnumMap<Direction, RotatingData> keys = new EnumMap<>(Direction.class);
 	protected BeltData chainInstance;
-	protected Direction sourceFacing;
 
 	public TransmissionChainInstance(MaterialManager materialManager, TransmissionChainBlockEntity blockEntity)
 	{
 		super(materialManager, blockEntity);
 
-		updateSourceFacing();
+		ChainDirection facing = ChainDirection.of(blockState.getValue(TransmissionChainBlock.FACING));
+		ChainConnection connection = AbstractTransmissionChainBlock.getFirstConnection(blockState);
 
-		Direction facing = blockEntity.getBlockState().getValue(TransmissionChainBlock.FACING);
-		TransmissionChainBlock.ChainSide side = getFirstConnectionSide();
-		TransmissionChainBlock.ConnectionType connectionType = TransmissionChainBlock.ConnectionType.NONE;
+		//Shaft towards facing.
+		keys.put(facing.direction, setupShaftData(facing.direction));
 
-		if (side != null)
-			connectionType = blockEntity.getBlockState().getValue(side.property);
-
-		//Shaft model instances.
-		keys.put(facing, getFacingShaft());
-
-		//Chain model instance
+		//Chain instance.
 		Instancer<BeltData> chainKey = materialManager.defaultSolid()
 													  .material(AllMaterialSpecs.BELTS)
-													  .getModel(getChainModel(connectionType));
+													  .getModel(getChainModel(connection.type()));
 
-		chainInstance = getChain(chainKey.createInstance(), CreateTransferSpriteShifts.BELT);
+		chainInstance = setupChainData(chainKey.createInstance(), CreateTransferSpriteShifts.CHAIN);
 
-		Direction direction = TransmissionChainBlock.getDirectionFromSide(facing, side);
-
-		if (connectionType != TransmissionChainBlock.ConnectionType.BELT)
+		if (connection.type() != ConnectionType.BELT)
 			return;
 
-		//Belt shafts
-		RotatingData key = getShaft(direction);
+		//Shaft towards belt.
+		Direction direction = facing.getDirectionFromSide(connection.side());
+		RotatingData key = setupShaftData(direction);
 		keys.put(direction, key);
 
-	}
-
-	private PartialModel getChainModel(TransmissionChainBlock.ConnectionType connectionType)
-	{
-		if (connectionType == TransmissionChainBlock.ConnectionType.NONE)
-			return CreateTransferModels.CHAIN;
-
-		return connectionType == TransmissionChainBlock.ConnectionType.CHAIN ? CreateTransferModels.CHAIN_CONNECTED : CreateTransferModels.CHAIN_BELT;
-	}
-
-	protected void updateSourceFacing()
-	{
-		if (!blockEntity.hasSource())
-		{
-			sourceFacing = null;
-			return;
-		}
-
-		BlockPos source = blockEntity.source.subtract(pos);
-		sourceFacing = Direction.getNearest(source.getX(), source.getY(), source.getZ());
 	}
 
 	@Override
 	public void update()
 	{
-		Direction facing = blockEntity.getBlockState().getValue(TransmissionChainBlock.FACING);
+		Direction facing = blockState.getValue(TransmissionChainBlock.FACING);
 
-		updateSourceFacing();
 		for (Map.Entry<Direction, RotatingData> key : keys.entrySet())
 		{
 			Direction direction = key.getKey();
 			Direction.Axis axis = direction.getAxis();
 
-			updateRotation(key.getValue(), axis, getSpeed(direction) * blockEntity.getRotationSpeedModifier(direction));
+			updateRotation(key.getValue(), axis, blockEntity.getSpeed() * blockEntity.getRotationSpeedModifier(direction));
 		}
 
-		chainInstance.setScrollTexture(CreateTransferSpriteShifts.BELT)
+		chainInstance.setScrollTexture(CreateTransferSpriteShifts.CHAIN)
 		   .setColor(blockEntity)
 		   .setRotationalSpeed(getChainRotationalSpeed(facing) * blockEntity.getRotationSpeedModifier(facing));
 	}
-
-
 
 	@Override
 	public void updateLight()
@@ -115,14 +83,35 @@ public class TransmissionChainInstance extends KineticBlockEntityInstance<Transm
 			relight(pos, chainInstance);
 	}
 
-	private RotatingData getFacingShaft()
+	@Override
+	protected void remove()
 	{
-		Direction facing = blockEntity.getBlockState().getValue(TransmissionChainBlock.FACING);
-
-		return getShaft(facing);
+		chainInstance.delete();
+		keys.values().forEach(InstanceData::delete);
+		keys.clear();
 	}
 
-	private RotatingData getShaft(Direction direction)
+	/**
+	 * Gets the correct chain model based on the connection type.
+	 * @param connectionType the connection type.
+	 *
+	 * @return the {@link PartialModel} corresponding to the given connection type.
+	 */
+	private PartialModel getChainModel(ConnectionType connectionType)
+	{
+		if (connectionType == ConnectionType.NONE)
+			return CreateTransferModels.CHAIN;
+
+		return connectionType == ConnectionType.CHAIN ? CreateTransferModels.CHAIN_CONNECTED : CreateTransferModels.CHAIN_BELT;
+	}
+
+	/**
+	 * Sets the starting data for a shaft model instance facing the given direction.
+	 * @param direction the direction the shaft is facing.
+	 *
+	 * @return The {@link RotatingData} of the instance.
+	 */
+	private RotatingData setupShaftData(Direction direction)
 	{
 		int blockLight = world.getBrightness(LightLayer.BLOCK, pos);
 		int skyLight = world.getBrightness(LightLayer.SKY, pos);
@@ -135,7 +124,7 @@ public class TransmissionChainInstance extends KineticBlockEntityInstance<Transm
 
 		RotatingData key = shaft.createInstance();
 		key.setRotationAxis(direction.getAxis())
-		   .setRotationalSpeed(getSpeed(direction) * blockEntity.getRotationSpeedModifier(direction))
+		   .setRotationalSpeed(blockEntity.getSpeed() * blockEntity.getRotationSpeedModifier(direction))
 		   .setRotationOffset(getRotationOffset(direction.getAxis()))
 		   .setColor(blockEntity)
 		   .setPosition(location.add(offset))
@@ -145,9 +134,15 @@ public class TransmissionChainInstance extends KineticBlockEntityInstance<Transm
 		return key;
 	}
 
-	private BeltData getChain(BeltData key, SpriteShiftEntry spriteShift)
+	/**
+	 * Sets the starting data for a chain model instance.
+	 * @param spriteShift the sprite shift for animating the instance.
+	 *
+	 * @return The {@link BeltData} of the instance.
+	 */
+	private BeltData setupChainData(BeltData key, SpriteShiftEntry spriteShift)
 	{
-		Direction facing = blockEntity.getBlockState().getValue(TransmissionChainBlock.FACING);
+		Direction facing = blockState.getValue(TransmissionChainBlock.FACING);
 		Quaternionf rotation = new Quaternionf();
 		Direction up = Direction.UP;
 
@@ -167,7 +162,7 @@ public class TransmissionChainInstance extends KineticBlockEntityInstance<Transm
 
 		if (blockEntity.isConnected())
 		{
-			TransmissionChainBlock.ChainSide side = getFirstConnectionSide();
+			ChainSide side = AbstractTransmissionChainBlock.getFirstConnection(blockState).side();
 			Quaternionf connectionRotation = new Quaternionf().fromAxisAngleRad(facing.getOpposite().step(), (float) side.rotationAngle);
 			rotation = connectionRotation.mul(rotation);
 		}
@@ -185,39 +180,14 @@ public class TransmissionChainInstance extends KineticBlockEntityInstance<Transm
 		return key;
 	}
 
-	private TransmissionChainBlock.ChainSide getFirstConnectionSide()
-	{
-		for (TransmissionChainBlock.ChainSide side : TransmissionChainBlock.ChainSide.values())
-		{
-			TransmissionChainBlock.ConnectionType connectionType = blockEntity.getBlockState().getValue(side.property);
-
-			if (connectionType != TransmissionChainBlock.ConnectionType.NONE)
-				return side;
-		}
-
-		return null;
-	}
-
-	private float getScrollSpeed()
-	{
-		return blockEntity.getSpeed();
-	}
-
+	/**
+	 * Retrieves the correct roation speed of the chain for a given direction.
+	 * @param direction the direction.
+	 *
+	 * @return the speed of the shaft facing the direction.
+	 */
 	private float getChainRotationalSpeed(Direction direction)
 	{
-		return direction.getAxisDirection().getStep() * -getScrollSpeed() * 0.415f;
-	}
-
-	private float getSpeed(Direction direction)
-	{
-		return blockEntity.getSpeed();
-	}
-
-	@Override
-	protected void remove()
-	{
-		chainInstance.delete();
-		keys.values().forEach(InstanceData::delete);
-		keys.clear();
+		return direction.getAxisDirection().getStep() * -blockEntity.getSpeed() * 0.415f;
 	}
 }
