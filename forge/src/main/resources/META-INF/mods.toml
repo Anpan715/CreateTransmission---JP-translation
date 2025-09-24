@@ -1,15 +1,17 @@
 modLoader = "javafml"
 loaderVersion = "[${forge_version},)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "MIT"
 
 [[mods]]
 modId = "createtransfer"
 version = "${version}"
 displayName = "Create: Transfer"
-authors = "SerpensSolida!"
+authors = "SerpensSolida"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+This mod adds a single block: Transmission Chain!
+
+This block can be used to power belt in a cleaner way without using encased chain drive.
 '''
 logoFile = "icon.png"
 

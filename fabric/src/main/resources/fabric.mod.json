@@ -3,15 +3,14 @@
   "id": "createtransfer",
   "version": "${version}",
   "name": "Create: Transfer",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "This mod adds a single block: Transmission Chain!\n\nThis block can be used to power belt in a cleaner way without using encased chain drive.",
   "authors": [
-    "Me!"
+    "SerpensSolida"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "${github_repo}"
   },
-  "license": "Insert License Here",
+  "license": "MIT",
   "icon": "assets/createtransfer/icon.png",
   "environment": "*",
   "entrypoints": {
