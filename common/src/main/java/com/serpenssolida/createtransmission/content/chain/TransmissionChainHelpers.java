@@ -37,15 +37,13 @@ public class TransmissionChainHelpers
 	 */
 	public enum ChainSide implements StringRepresentable
 	{
-		TOP(Math.PI * 0.5, CONNECTION_TOP), RIGHT(0, CONNECTION_RIGHT), BOTTOM(Math.PI * 1.5, CONNECTION_BOTTOM), LEFT(Math.PI, CONNECTION_LEFT);
+		TOP(Math.PI * 0.5), RIGHT(0), BOTTOM(Math.PI * 1.5), LEFT(Math.PI);
 
 		final double rotationAngle;
-		final EnumProperty<ConnectionType> property;
 
-		ChainSide(double rotationAngle, EnumProperty<ConnectionType> property)
+		ChainSide(double rotationAngle)
 		{
 			this.rotationAngle = rotationAngle;
-			this.property = property;
 		}
 
 		@Override

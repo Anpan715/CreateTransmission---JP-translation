@@ -46,10 +46,8 @@ import static com.serpenssolida.createtransmission.CTShapes.*;
 public abstract class AbstractTransmissionChainBlock extends KineticBlock implements IBE<TransmissionChainBlockEntity>, ProperWaterloggedBlock
 {
 	public static final EnumProperty<Direction> FACING = EnumProperty.create("facing", Direction.class);
-	public static final EnumProperty<ConnectionType> CONNECTION_TOP = EnumProperty.create("top", ConnectionType.class);
-	public static final EnumProperty<ConnectionType> CONNECTION_RIGHT = EnumProperty.create("right", ConnectionType.class);
-	public static final EnumProperty<ConnectionType> CONNECTION_BOTTOM = EnumProperty.create("bottom", ConnectionType.class);
-	public static final EnumProperty<ConnectionType> CONNECTION_LEFT = EnumProperty.create("left", ConnectionType.class);
+	public static final EnumProperty<ConnectionType> CONNECTION_TYPE = EnumProperty.create("connection_type", ConnectionType.class);
+	public static final EnumProperty<ChainSide> CONNECTION_SIDE = EnumProperty.create("connection_side", ChainSide.class);
 
 	protected AbstractTransmissionChainBlock(Properties properties)
 	{
@@ -58,17 +56,19 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 		this.registerDefaultState(this.getStateDefinition()
 									  .any()
 									  .setValue(FACING, Direction.NORTH)
-									  .setValue(CONNECTION_TOP, ConnectionType.NONE)
+									  .setValue(CONNECTION_TYPE, ConnectionType.NONE)
+									  .setValue(CONNECTION_SIDE, ChainSide.RIGHT)
+									  /*.setValue(CONNECTION_TOP, ConnectionType.NONE)
 									  .setValue(CONNECTION_RIGHT, ConnectionType.NONE)
 									  .setValue(CONNECTION_BOTTOM, ConnectionType.NONE)
-									  .setValue(CONNECTION_LEFT, ConnectionType.NONE)
+									  .setValue(CONNECTION_LEFT, ConnectionType.NONE)*/
 									  .setValue(WATERLOGGED, false));
 	}
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
 	{
-		super.createBlockStateDefinition(builder.add(FACING, CONNECTION_TOP, CONNECTION_RIGHT, CONNECTION_BOTTOM, CONNECTION_LEFT, WATERLOGGED));
+		super.createBlockStateDefinition(builder.add(FACING, CONNECTION_TYPE, CONNECTION_SIDE, WATERLOGGED));
 	}
 
 	@Override
@@ -96,7 +96,7 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 			return beltBlock.hasShaftTowards(world, otherPos, beltEntity.getBlockState(), facing.getOpposite());
 		}
 
-		return false;
+		return true;
 	}
 
 	@Override
@@ -108,7 +108,7 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext)
 	{
-		ChainConnection connection = getFirstConnection(state);
+		ChainConnection connection = getConnection(state);
 		Direction facing = state.getValue(FACING);
 
 		if (connection.side() == null)
@@ -178,11 +178,14 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 		if (wasConnected)
 		{
 			//Get the connection and update it if was removed.
-			ChainConnection oldConnection = getFirstConnection(state);
+			ChainConnection oldConnection = getConnection(state);
 			ConnectionType connection = queryWorldForConnection(world, pos, state, oldConnection.side());
 
 			if (connection == ConnectionType.NONE)
-				state = state.setValue(oldConnection.side().property, connection);
+			{
+				state = state.setValue(CONNECTION_TYPE, connection);
+				state = state.setValue(CONNECTION_SIDE, oldConnection.side());
+			}
 
 			return state;
 		}
@@ -191,7 +194,10 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 		ChainConnection firstConnection = findFirstConnection(world, pos, state);
 
 		if (firstConnection.side() != null && firstConnection.type() != ConnectionType.NONE)
-			state = state.setValue(firstConnection.side().property, firstConnection.type());
+		{
+			state = state.setValue(CONNECTION_TYPE, firstConnection.type());
+			state = state.setValue(CONNECTION_SIDE, firstConnection.side());
+		}
 
 		return state;
 	}
@@ -242,8 +248,12 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 
 		if (neighbourEntity instanceof TransmissionChainBlockEntity chainEntity)
 		{
-			ConnectionType otherConnection = neighbourState.getValue(ChainSide.opposite(side).property);
-			if (facing.direction == neighbourState.getValue(FACING) && ((otherConnection == ConnectionType.CHAIN && chainEntity.isConnected()) || (otherConnection == ConnectionType.NONE && !chainEntity.isConnected())))
+			ChainConnection otherConnection = getConnection(neighbourState);
+			//ConnectionType otherConnection = neighbourState.getValue(ChainSide.opposite(side).property);
+			boolean isConnectionValid = (chainEntity.isConnected() && otherConnection.type() == ConnectionType.CHAIN && ChainSide.opposite(otherConnection.side()) == side);
+			boolean isConnectionAvailable = (!chainEntity.isConnected() && otherConnection.type() == ConnectionType.NONE);
+
+			if (facing.direction == neighbourState.getValue(FACING) && (isConnectionValid || isConnectionAvailable))
 				return ConnectionType.CHAIN;
 		}
 		else if (neighbourEntity instanceof BeltBlockEntity)
@@ -261,42 +271,20 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	}
 
 	/**
-	 * Gets the first available connection from the block state. It does not query the world for neighbour blocks.
+	 * Gets the connection data from the block state. It does not query the world for neighbour blocks.
 	 * @param state the state of the block.
-	 *
-	 * @return a {@link ChainConnection} representing the first available connection. If none was found ChainConnection.side will be null.
-	 */
-	public static ChainConnection getFirstConnection(BlockState state)
-	{
-		if (!isConnected(state))
-			return new ChainConnection(null, ConnectionType.NONE);
-
-		for (ChainSide side : ChainSide.values())
-		{
-			ConnectionType connection = AbstractTransmissionChainBlock.getConnection(state, side);
-			if (connection != ConnectionType.NONE)
-				return new ChainConnection(side, connection);
-		}
-
-		return new ChainConnection(null, ConnectionType.NONE);
-	}
-
-	/**
-	 * Gets the connection type on the given side from the block state. It does not query the world for neighbour blocks.
-	 * @param state the state of the block.
-	 * @param side the side of the block.
 	 *
 	 * @return a {@link ConnectionType} representing the connection type.
 	 */
-	public static ConnectionType getConnection(BlockState state, ChainSide side)
+	public static ChainConnection getConnection(BlockState state)
 	{
 		if (!(state.getBlock() instanceof AbstractTransmissionChainBlock))
-			return ConnectionType.NONE;
+			return new ChainConnection(null, ConnectionType.NONE);
 
-		if (side == null)
-			return ConnectionType.NONE;
+		ConnectionType connectionType = state.getValue(CONNECTION_TYPE);
+		ChainSide side = state.getValue(CONNECTION_SIDE);
 
-		return state.getValue(side.property);
+		return new ChainConnection(connectionType != ConnectionType.NONE ? side : null, connectionType);
 	}
 
 	/**
@@ -307,17 +295,31 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	 */
 	public static boolean isConnected(BlockState state)
 	{
-		return state.getValue(AbstractTransmissionChainBlock.CONNECTION_TOP) != ConnectionType.NONE ||
-				state.getValue(AbstractTransmissionChainBlock.CONNECTION_RIGHT) != ConnectionType.NONE ||
-				state.getValue(AbstractTransmissionChainBlock.CONNECTION_BOTTOM) != ConnectionType.NONE ||
-				state.getValue(AbstractTransmissionChainBlock.CONNECTION_LEFT) != ConnectionType.NONE;
+		if (!(state.getBlock() instanceof AbstractTransmissionChainBlock))
+			return false;
+
+		return state.getValue(CONNECTION_TYPE) != ConnectionType.NONE;
+	}
+
+	/**
+	 * Checks if the chain is connected from the given side. It does not query the world for neighbour blocks.
+	 * @param state state of the block.
+	 *
+	 * @return true if in the chain is connected from the given side, false otherwise.
+	 */
+	public static boolean isSideConnected(BlockState state, ChainSide side)
+	{
+		if (!(state.getBlock() instanceof AbstractTransmissionChainBlock))
+			return false;
+
+		return state.getValue(CONNECTION_SIDE) == side;
 	}
 
 	@Override
 	protected boolean areStatesKineticallyEquivalent(BlockState oldState, BlockState newState)
 	{
-		ChainConnection oldConnection = getFirstConnection(oldState);
-		ChainConnection newConnection = getFirstConnection(newState);
+		ChainConnection oldConnection = getConnection(oldState);
+		ChainConnection newConnection = getConnection(newState);
 
 		return super.areStatesKineticallyEquivalent(oldState, newState) && oldConnection.equals(newConnection);
 	}
@@ -327,9 +329,11 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	{
 		Direction facing = state.getValue(FACING);
 		state = state.setValue(FACING, mirror.mirror(facing));
-		state = mirrorSide(state, mirror);
 
-		return super.mirror(state, mirror);
+		if (isConnected(state))
+			state = mirrorSide(state, mirror);
+
+		return state;
 	}
 
 	@Override
@@ -340,8 +344,9 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 		if (rotation == Rotation.NONE)
 			return state;
 
+		//Rotate the side only if the chain is facing a vertical direction.
 		if (facing.getAxis().isVertical())
-			return rotateSides(state, rotation == Rotation.CLOCKWISE_180 ? rotation : rotation.getRotated(Rotation.CLOCKWISE_180));
+			return rotateSide(state, rotation == Rotation.CLOCKWISE_180 ? rotation : rotation.getRotated(Rotation.CLOCKWISE_180));
 
 		state = state.setValue(FACING, rotation.rotate(facing));
 
@@ -349,69 +354,55 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	}
 
 	/**
-	 * Mirrors the sides inside the state by switching their values accordingly.
+	 * Mirrors the side inside the state.
 	 * @param state the state of the block.
 	 * @param mirror the mirror operation.
 	 *
-	 * @return the state with mirrored sides.
+	 * @return the state with mirrored side.
 	 */
 	private BlockState mirrorSide(BlockState state, Mirror mirror)
 	{
 		Direction facing = state.getValue(FACING);
+		ChainSide side = state.getValue(CONNECTION_SIDE);
 
 		if (mirror == Mirror.NONE)
 			return state;
 
+		//If the chain is facing a horizontal direction left and right always switch side.
 		if (facing.getAxis().isHorizontal())
 		{
-			ConnectionType right = state.getValue(CONNECTION_RIGHT);
-			ConnectionType left = state.getValue(CONNECTION_LEFT);
-			state = state.setValue(CONNECTION_LEFT, right);
-			state = state.setValue(CONNECTION_RIGHT, left);
-			return state;
+			if (side == ChainSide.LEFT || side == ChainSide.RIGHT)
+				return state.setValue(CONNECTION_SIDE, ChainSide.opposite(side));
+			else
+				return state;
 		}
 
-		if (mirror == Mirror.FRONT_BACK)
-		{
-			ConnectionType right = state.getValue(CONNECTION_RIGHT);
-			ConnectionType left = state.getValue(CONNECTION_LEFT);
-			state = state.setValue(CONNECTION_LEFT, right);
-			state = state.setValue(CONNECTION_RIGHT, left);
-		}
-		else if (mirror == Mirror.LEFT_RIGHT)
-		{
-			ConnectionType top = state.getValue(CONNECTION_TOP);
-			ConnectionType bottom = state.getValue(CONNECTION_BOTTOM);
-			state = state.setValue(CONNECTION_BOTTOM, top);
-			state = state.setValue(CONNECTION_TOP, bottom);
-		}
+		//Switch side accordingly to the mirror direction.
+		if (mirror == Mirror.FRONT_BACK && (side == ChainSide.LEFT || side == ChainSide.RIGHT))
+			state = state.setValue(CONNECTION_SIDE, ChainSide.opposite(side));
+		else if (mirror == Mirror.LEFT_RIGHT && (side == ChainSide.TOP || side == ChainSide.BOTTOM))
+			state = state.setValue(CONNECTION_SIDE, ChainSide.opposite(side));
 
 		return state;
 	}
 
 	/**
-	 * Rotates the sides inside the state by switching their values accordingly.
+	 * Rotates the side inside the state.
 	 * @param state the state of the block.
 	 * @param rotation the rotation operation.
 	 *
-	 * @return the state with rotated sides.
+	 * @return the state with rotated side.
 	 */
-	private static BlockState rotateSides(BlockState state, Rotation rotation)
+	private static BlockState rotateSide(BlockState state, Rotation rotation)
 	{
 		Direction facing = state.getValue(FACING);
+		ChainSide side = state.getValue(CONNECTION_SIDE);
 
-		ConnectionType top = state.getValue(CONNECTION_TOP);
-		ConnectionType right = state.getValue(CONNECTION_RIGHT);
-		ConnectionType bottom = state.getValue(CONNECTION_BOTTOM);
-		ConnectionType left = state.getValue(CONNECTION_LEFT);
-
+		//If the chain is facing down it needs rotating in the opposite direction.
 		if (facing == Direction.DOWN && rotation != Rotation.CLOCKWISE_180)
 			rotation = rotation == Rotation.CLOCKWISE_90 ? Rotation.COUNTERCLOCKWISE_90 : Rotation.CLOCKWISE_90;
 
-		state = state.setValue(ChainSide.rotate(ChainSide.TOP, rotation).property, top);
-		state = state.setValue(ChainSide.rotate(ChainSide.RIGHT, rotation).property, right);
-		state = state.setValue(ChainSide.rotate(ChainSide.BOTTOM, rotation).property, bottom);
-		state = state.setValue(ChainSide.rotate(ChainSide.LEFT, rotation).property, left);
+		state = state.setValue(CONNECTION_SIDE, ChainSide.rotate(side, rotation));
 
 		return state;
 	}
@@ -433,9 +424,9 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 			return true;
 
 		ChainSide side = facing.getSideFromDirection(direction);
-		ConnectionType connection = AbstractTransmissionChainBlock.getConnection(state, side);
+		ChainConnection connection = AbstractTransmissionChainBlock.getConnection(state);
 
-		return connection != ConnectionType.NONE;
+		return side == connection.side() && connection.type() != ConnectionType.NONE;
 	}
 
 	@Override

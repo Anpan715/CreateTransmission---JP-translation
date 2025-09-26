@@ -9,9 +9,20 @@ import net.minecraft.world.level.block.Block;
 
 public class CTBuilderTransformersImpl
 {
-	public static <T extends Block> void encasedTransmissionChain(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov, String casing) {}
+	private CTBuilderTransformersImpl(){}
 
-	public static <T extends Block> void noModel(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov) {}
+	public static <T extends Block> void encasedTransmissionChain(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov, String casing)
+	{
+		//Data generation only work on forge side.
+	}
 
-	public static void handheldItem(DataGenContext<Item, BlockItem> ctx, RegistrateItemModelProvider prov) {}
+	public static <T extends Block> void noModel(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov)
+	{
+		//Data generation only work on forge side.
+	}
+
+	public static void handheldItem(DataGenContext<Item, BlockItem> ctx, RegistrateItemModelProvider prov)
+	{
+		//Data generation only work on forge side.
+	}
 }

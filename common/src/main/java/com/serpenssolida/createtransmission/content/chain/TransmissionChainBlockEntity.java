@@ -9,6 +9,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
+import static com.serpenssolida.createtransmission.content.chain.TransmissionChainHelpers.*;
+
 public class TransmissionChainBlockEntity extends SplitShaftBlockEntity
 {
 	public TransmissionChainBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state)
@@ -33,14 +35,14 @@ public class TransmissionChainBlockEntity extends SplitShaftBlockEntity
 			return 1;
 
 		ChainDirection facing = ChainDirection.of(getBlockState().getValue(TransmissionChainBlock.FACING));
+		ChainSide side = facing.getSideFromDirection(face);
 
 		//Edge case when connected to adjacent belt.
-		if (isConnected() && facing.direction != face)
+		if (TransmissionChainBlock.isSideConnected(getBlockState(), side) && facing.direction != face)
 		{
-			ChainSide side = facing.getSideFromDirection(face);
-			ConnectionType connectionType = TransmissionChainBlock.getConnection(getBlockState(), side);
+			ChainConnection connection = TransmissionChainBlock.getConnection(getBlockState());
 
-			if (connectionType == ConnectionType.BELT)
+			if (connection.type() == ConnectionType.BELT)
 				return (facing.getAxis() == Direction.Axis.Z && side == ChainSide.LEFT) || (facing.getAxis() == Direction.Axis.X && side == ChainSide.RIGHT) ? 1 : -1;
 		}
 

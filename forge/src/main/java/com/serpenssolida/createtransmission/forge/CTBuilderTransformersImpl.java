@@ -34,7 +34,7 @@ public class CTBuilderTransformersImpl
 
 			if (AbstractTransmissionChainBlock.isConnected(state))
 			{
-				ChainConnection connection = AbstractTransmissionChainBlock.getFirstConnection(state);
+				ChainConnection connection = AbstractTransmissionChainBlock.getConnection(state);
 				
 				modelTypePath = connection.type() == ConnectionType.CHAIN ? "_connected" : "_belt";
 				sidePath = "_" + connection.side().toString().toLowerCase();
@@ -46,7 +46,7 @@ public class CTBuilderTransformersImpl
 								  .rotationY((int) (facing.toYRot() - 180) - (!isHorizontal ? 90 : 0))
 								  .rotationX(zRot)
 								  .modelFile(modelFile)
-								  .uvLock(true)
+								  .uvLock(false)
 								  .build();
 
 		}, AbstractTransmissionChainBlock.WATERLOGGED);

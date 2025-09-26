@@ -12,6 +12,8 @@ import java.util.function.Supplier;
 
 public class CTCreativeTabsImpl
 {
+	private CTCreativeTabsImpl () {}
+
 	public static Supplier<CreativeModeTab> registerTab(String id, Supplier<CreativeModeTab> sup)
 	{
 		CreativeModeTab tab = sup.get();

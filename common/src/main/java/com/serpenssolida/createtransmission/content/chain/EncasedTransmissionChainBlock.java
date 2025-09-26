@@ -62,10 +62,12 @@ public class EncasedTransmissionChainBlock extends AbstractTransmissionChainBloc
 
 		BlockState newState = CTBlocks.TRANSMISSION_CHAIN.getDefaultState()
 														 .setValue(FACING, state.getValue(FACING))
-														 .setValue(CONNECTION_TOP, state.getValue(CONNECTION_TOP))
+														 .setValue(CONNECTION_TYPE, state.getValue(CONNECTION_TYPE))
+														 .setValue(CONNECTION_SIDE, state.getValue(CONNECTION_SIDE))
+														 /*.setValue(CONNECTION_TOP, state.getValue(CONNECTION_TOP))
 														 .setValue(CONNECTION_BOTTOM, state.getValue(CONNECTION_BOTTOM))
 														 .setValue(CONNECTION_LEFT, state.getValue(CONNECTION_LEFT))
-														 .setValue(CONNECTION_RIGHT, state.getValue(CONNECTION_RIGHT))
+														 .setValue(CONNECTION_RIGHT, state.getValue(CONNECTION_RIGHT))*/
 														 .setValue(WATERLOGGED, state.getValue(WATERLOGGED));
 
 		context.getLevel().levelEvent(2001, context.getClickedPos(), Block.getId(state));
@@ -84,10 +86,12 @@ public class EncasedTransmissionChainBlock extends AbstractTransmissionChainBloc
 	{
 		BlockState newState = defaultBlockState()
 				.setValue(FACING, state.getValue(FACING))
-				.setValue(CONNECTION_TOP, state.getValue(CONNECTION_TOP))
+				.setValue(CONNECTION_TYPE, state.getValue(CONNECTION_TYPE))
+				.setValue(CONNECTION_SIDE, state.getValue(CONNECTION_SIDE))
+				/*.setValue(CONNECTION_TOP, state.getValue(CONNECTION_TOP))
 				.setValue(CONNECTION_BOTTOM, state.getValue(CONNECTION_BOTTOM))
 				.setValue(CONNECTION_LEFT, state.getValue(CONNECTION_LEFT))
-				.setValue(CONNECTION_RIGHT, state.getValue(CONNECTION_RIGHT))
+				.setValue(CONNECTION_RIGHT, state.getValue(CONNECTION_RIGHT))*/
 				.setValue(WATERLOGGED, state.getValue(WATERLOGGED));
 
 		KineticBlockEntity.switchToBlockState(level, pos, newState);

@@ -1,1461 +1,219 @@
 {
   "variants": {
-    "bottom=belt,facing=down,left=belt,right=belt,top=belt": {
+    "connection_side=bottom,connection_type=belt,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=belt,right=belt,top=chain": {
+    "connection_side=bottom,connection_type=belt,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=belt,right=belt,top=none": {
+    "connection_side=bottom,connection_type=belt,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=belt,right=chain,top=belt": {
+    "connection_side=bottom,connection_type=belt,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=belt,right=chain,top=chain": {
+    "connection_side=bottom,connection_type=belt,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=belt,right=chain,top=none": {
+    "connection_side=bottom,connection_type=belt,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=belt,right=none,top=belt": {
+    "connection_side=bottom,connection_type=chain,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=belt,right=none,top=chain": {
+    "connection_side=bottom,connection_type=chain,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=belt,right=none,top=none": {
+    "connection_side=bottom,connection_type=chain,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=chain,right=belt,top=belt": {
+    "connection_side=bottom,connection_type=chain,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=chain,right=belt,top=chain": {
+    "connection_side=bottom,connection_type=chain,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=chain,right=belt,top=none": {
+    "connection_side=bottom,connection_type=chain,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=chain,right=chain,top=belt": {
+    "connection_side=bottom,connection_type=none,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=chain,right=chain,top=chain": {
+    "connection_side=bottom,connection_type=none,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=chain,right=chain,top=none": {
+    "connection_side=bottom,connection_type=none,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=chain,right=none,top=belt": {
+    "connection_side=bottom,connection_type=none,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=chain,right=none,top=chain": {
+    "connection_side=bottom,connection_type=none,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=chain,right=none,top=none": {
+    "connection_side=bottom,connection_type=none,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=none,right=belt,top=belt": {
+    "connection_side=left,connection_type=belt,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=none,right=belt,top=chain": {
+    "connection_side=left,connection_type=belt,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=none,right=belt,top=none": {
+    "connection_side=left,connection_type=belt,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=none,right=chain,top=belt": {
+    "connection_side=left,connection_type=belt,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=none,right=chain,top=chain": {
+    "connection_side=left,connection_type=belt,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=none,right=chain,top=none": {
+    "connection_side=left,connection_type=belt,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=none,right=none,top=belt": {
+    "connection_side=left,connection_type=chain,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=none,right=none,top=chain": {
+    "connection_side=left,connection_type=chain,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=down,left=none,right=none,top=none": {
+    "connection_side=left,connection_type=chain,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=belt,right=belt,top=belt": {
+    "connection_side=left,connection_type=chain,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=belt,right=belt,top=chain": {
+    "connection_side=left,connection_type=chain,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=belt,right=belt,top=none": {
+    "connection_side=left,connection_type=chain,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=belt,right=chain,top=belt": {
+    "connection_side=left,connection_type=none,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=belt,right=chain,top=chain": {
+    "connection_side=left,connection_type=none,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=belt,right=chain,top=none": {
+    "connection_side=left,connection_type=none,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=belt,right=none,top=belt": {
+    "connection_side=left,connection_type=none,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=belt,right=none,top=chain": {
+    "connection_side=left,connection_type=none,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=belt,right=none,top=none": {
+    "connection_side=left,connection_type=none,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=chain,right=belt,top=belt": {
+    "connection_side=right,connection_type=belt,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=chain,right=belt,top=chain": {
+    "connection_side=right,connection_type=belt,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=chain,right=belt,top=none": {
+    "connection_side=right,connection_type=belt,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=chain,right=chain,top=belt": {
+    "connection_side=right,connection_type=belt,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=chain,right=chain,top=chain": {
+    "connection_side=right,connection_type=belt,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=chain,right=chain,top=none": {
+    "connection_side=right,connection_type=belt,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=chain,right=none,top=belt": {
+    "connection_side=right,connection_type=chain,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=chain,right=none,top=chain": {
+    "connection_side=right,connection_type=chain,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=chain,right=none,top=none": {
+    "connection_side=right,connection_type=chain,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=none,right=belt,top=belt": {
+    "connection_side=right,connection_type=chain,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=none,right=belt,top=chain": {
+    "connection_side=right,connection_type=chain,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=none,right=belt,top=none": {
+    "connection_side=right,connection_type=chain,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=none,right=chain,top=belt": {
+    "connection_side=right,connection_type=none,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=none,right=chain,top=chain": {
+    "connection_side=right,connection_type=none,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=none,right=chain,top=none": {
+    "connection_side=right,connection_type=none,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=none,right=none,top=belt": {
+    "connection_side=right,connection_type=none,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=none,right=none,top=chain": {
+    "connection_side=right,connection_type=none,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=east,left=none,right=none,top=none": {
+    "connection_side=right,connection_type=none,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=belt,right=belt,top=belt": {
+    "connection_side=top,connection_type=belt,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=belt,right=belt,top=chain": {
+    "connection_side=top,connection_type=belt,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=belt,right=belt,top=none": {
+    "connection_side=top,connection_type=belt,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=belt,right=chain,top=belt": {
+    "connection_side=top,connection_type=belt,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=belt,right=chain,top=chain": {
+    "connection_side=top,connection_type=belt,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=belt,right=chain,top=none": {
+    "connection_side=top,connection_type=belt,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=belt,right=none,top=belt": {
+    "connection_side=top,connection_type=chain,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=belt,right=none,top=chain": {
+    "connection_side=top,connection_type=chain,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=belt,right=none,top=none": {
+    "connection_side=top,connection_type=chain,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=chain,right=belt,top=belt": {
+    "connection_side=top,connection_type=chain,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=chain,right=belt,top=chain": {
+    "connection_side=top,connection_type=chain,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=chain,right=belt,top=none": {
+    "connection_side=top,connection_type=chain,facing=west": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=chain,right=chain,top=belt": {
+    "connection_side=top,connection_type=none,facing=down": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=chain,right=chain,top=chain": {
+    "connection_side=top,connection_type=none,facing=east": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=chain,right=chain,top=none": {
+    "connection_side=top,connection_type=none,facing=north": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=chain,right=none,top=belt": {
+    "connection_side=top,connection_type=none,facing=south": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=chain,right=none,top=chain": {
+    "connection_side=top,connection_type=none,facing=up": {
       "model": "create:block/belt/particle"
     },
-    "bottom=belt,facing=north,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=north,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=north,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=north,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=north,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=north,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=north,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=north,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=north,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=north,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=south,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=up,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=belt,facing=west,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=down,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=east,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=north,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=south,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=up,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=chain,facing=west,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=down,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=east,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=north,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=south,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=up,left=none,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=belt,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=belt,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=belt,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=belt,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=belt,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=belt,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=belt,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=belt,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=belt,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=chain,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=chain,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=chain,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=chain,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=chain,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=chain,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=chain,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=chain,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=chain,right=none,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=none,right=belt,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=none,right=belt,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=none,right=belt,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=none,right=chain,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=none,right=chain,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=none,right=chain,top=none": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=none,right=none,top=belt": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=none,right=none,top=chain": {
-      "model": "create:block/belt/particle"
-    },
-    "bottom=none,facing=west,left=none,right=none,top=none": {
+    "connection_side=top,connection_type=none,facing=west": {
       "model": "create:block/belt/particle"
     }
   }

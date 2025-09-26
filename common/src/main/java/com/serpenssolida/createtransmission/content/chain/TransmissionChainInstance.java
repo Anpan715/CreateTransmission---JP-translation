@@ -34,7 +34,7 @@ public class TransmissionChainInstance extends KineticBlockEntityInstance<Transm
 		super(materialManager, blockEntity);
 
 		ChainDirection facing = ChainDirection.of(blockState.getValue(TransmissionChainBlock.FACING));
-		ChainConnection connection = AbstractTransmissionChainBlock.getFirstConnection(blockState);
+		ChainConnection connection = AbstractTransmissionChainBlock.getConnection(blockState);
 
 		//Shaft towards facing.
 		keys.put(facing.direction, setupShaftData(facing.direction));
@@ -162,7 +162,7 @@ public class TransmissionChainInstance extends KineticBlockEntityInstance<Transm
 
 		if (blockEntity.isConnected())
 		{
-			ChainSide side = AbstractTransmissionChainBlock.getFirstConnection(blockState).side();
+			ChainSide side = AbstractTransmissionChainBlock.getConnection(blockState).side();
 			Quaternionf connectionRotation = new Quaternionf().fromAxisAngleRad(facing.getOpposite().step(), (float) side.rotationAngle);
 			rotation = connectionRotation.mul(rotation);
 		}
