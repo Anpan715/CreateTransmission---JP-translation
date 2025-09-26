@@ -5,9 +5,10 @@ import com.simibubi.create.foundation.utility.Lang;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
 
-import static com.serpenssolida.createtransmission.content.chain.AbstractTransmissionChainBlock.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class TransmissionChainHelpers
 {
@@ -80,6 +81,21 @@ public class TransmissionChainHelpers
 				case BOTTOM -> LEFT;
 				case LEFT -> TOP;
 			};
+		}
+
+		public static ChainSide[] valuesFrom(ChainSide startingSide, boolean excludeStarting)
+		{
+			if (startingSide == LEFT && !excludeStarting)
+				return ChainSide.values();
+
+			//Split values at startingSide and merge them in reverse order.
+			List<ChainSide> sides = new ArrayList<>(Arrays.asList(ChainSide.values())
+												  .subList(startingSide.ordinal() + 1, ChainSide.values().length));
+			List<ChainSide> beforeStarting = Arrays.asList(ChainSide.values())
+												   .subList(0, startingSide.ordinal() + (excludeStarting ? 0 : 1));
+			sides.addAll(beforeStarting);
+
+			return sides.toArray(new ChainSide[0]);
 		}
 	}
 

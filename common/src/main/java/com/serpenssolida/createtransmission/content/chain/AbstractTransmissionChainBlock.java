@@ -7,6 +7,7 @@ import com.serpenssolida.createtransmission.content.chain.TransmissionChainHelpe
 import com.serpenssolida.createtransmission.content.chain.TransmissionChainHelpers.ChainSide;
 import com.serpenssolida.createtransmission.content.chain.TransmissionChainHelpers.ConnectionType;
 import com.simibubi.create.content.kinetics.base.KineticBlock;
+import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import com.simibubi.create.content.kinetics.belt.BeltBlock;
 import com.simibubi.create.content.kinetics.belt.BeltBlockEntity;
 import com.simibubi.create.foundation.block.IBE;
@@ -58,10 +59,6 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 									  .setValue(FACING, Direction.NORTH)
 									  .setValue(CONNECTION_TYPE, ConnectionType.NONE)
 									  .setValue(CONNECTION_SIDE, ChainSide.RIGHT)
-									  /*.setValue(CONNECTION_TOP, ConnectionType.NONE)
-									  .setValue(CONNECTION_RIGHT, ConnectionType.NONE)
-									  .setValue(CONNECTION_BOTTOM, ConnectionType.NONE)
-									  .setValue(CONNECTION_LEFT, ConnectionType.NONE)*/
 									  .setValue(WATERLOGGED, false));
 	}
 
@@ -96,13 +93,26 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 			return beltBlock.hasShaftTowards(world, otherPos, beltEntity.getBlockState(), facing.getOpposite());
 		}
 
-		return true;
+		return false;
 	}
 
 	@Override
 	public InteractionResult onWrenched(BlockState state, UseOnContext context)
 	{
-		return InteractionResult.FAIL;
+		if (context.getLevel().isClientSide)
+			return InteractionResult.SUCCESS;
+
+		ChainSide side = isConnected(state) ? state.getValue(CONNECTION_SIDE) : ChainSide.TOP;
+		ChainConnection nextAvailableConnection = findFirstConnection(context.getLevel(), context.getClickedPos(), state, ChainSide.valuesFrom(side, false));
+
+		if (nextAvailableConnection.side() != null)
+			state = state.setValue(CONNECTION_SIDE, nextAvailableConnection.side());
+
+		state = state.setValue(CONNECTION_TYPE, nextAvailableConnection.type());
+
+		KineticBlockEntity.switchToBlockState(context.getLevel(), context.getClickedPos(), state);
+
+		return InteractionResult.SUCCESS;
 	}
 
 	@Override
@@ -203,7 +213,7 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	}
 
 	/**
-	 * Finds the first connection available to the chain by querying the world for block.
+	 * Finds the first connection available to the chain by querying the world for connections.
 	 * @param world the world the bloc is in.
 	 * @param pos location of the block.
 	 * @param state current state of the block.
@@ -212,8 +222,23 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 	 */
 	private static ChainConnection findFirstConnection(LevelAccessor world, BlockPos pos, BlockState state)
 	{
+		return findFirstConnection(world, pos, state, ChainSide.values());
+	}
+
+	/**
+	 * Finds the first connection available to the chain by querying the world for block from the given sides.
+	 *
+	 * @param world the world the block is in.
+	 * @param pos location of the block.
+	 * @param state current state of the block.
+	 * @param sides all sides that needs to be queried.
+	 *
+	 * @return the connection if one is found.
+	 */
+	private static ChainConnection findFirstConnection(LevelAccessor world, BlockPos pos, BlockState state, ChainSide[] sides)
+	{
 		//Check all side for a connection.
-		for (ChainSide side : ChainSide.values())
+		for (ChainSide side : sides)
 		{
 			//Get connection type.
 			ConnectionType connection = queryWorldForConnection(world, pos, state, side);
@@ -246,17 +271,16 @@ public abstract class AbstractTransmissionChainBlock extends KineticBlock implem
 
 		BlockState neighbourState = neighbourEntity.getBlockState();
 
-		if (neighbourEntity instanceof TransmissionChainBlockEntity chainEntity)
+		if (neighbourEntity instanceof TransmissionChainBlockEntity chainEntity) //Transmission Chain.
 		{
 			ChainConnection otherConnection = getConnection(neighbourState);
-			//ConnectionType otherConnection = neighbourState.getValue(ChainSide.opposite(side).property);
 			boolean isConnectionValid = (chainEntity.isConnected() && otherConnection.type() == ConnectionType.CHAIN && ChainSide.opposite(otherConnection.side()) == side);
 			boolean isConnectionAvailable = (!chainEntity.isConnected() && otherConnection.type() == ConnectionType.NONE);
 
 			if (facing.direction == neighbourState.getValue(FACING) && (isConnectionValid || isConnectionAvailable))
 				return ConnectionType.CHAIN;
 		}
-		else if (neighbourEntity instanceof BeltBlockEntity)
+		else if (neighbourEntity instanceof BeltBlockEntity) //Belt.
 		{
 			BeltBlock belt = (BeltBlock) neighbourState.getBlock();
 			Direction directionBeltToChain = facing.getDirectionFromSide(side).getOpposite();

@@ -55,7 +55,7 @@ public class EncasedTransmissionChainBlock extends AbstractTransmissionChainBloc
 	}
 
 	@Override
-	public InteractionResult onWrenched(BlockState state, UseOnContext context)
+	public InteractionResult onSneakWrenched(BlockState state, UseOnContext context)
 	{
 		if (context.getLevel().isClientSide)
 			return InteractionResult.SUCCESS;
@@ -64,10 +64,6 @@ public class EncasedTransmissionChainBlock extends AbstractTransmissionChainBloc
 														 .setValue(FACING, state.getValue(FACING))
 														 .setValue(CONNECTION_TYPE, state.getValue(CONNECTION_TYPE))
 														 .setValue(CONNECTION_SIDE, state.getValue(CONNECTION_SIDE))
-														 /*.setValue(CONNECTION_TOP, state.getValue(CONNECTION_TOP))
-														 .setValue(CONNECTION_BOTTOM, state.getValue(CONNECTION_BOTTOM))
-														 .setValue(CONNECTION_LEFT, state.getValue(CONNECTION_LEFT))
-														 .setValue(CONNECTION_RIGHT, state.getValue(CONNECTION_RIGHT))*/
 														 .setValue(WATERLOGGED, state.getValue(WATERLOGGED));
 
 		context.getLevel().levelEvent(2001, context.getClickedPos(), Block.getId(state));
@@ -88,10 +84,6 @@ public class EncasedTransmissionChainBlock extends AbstractTransmissionChainBloc
 				.setValue(FACING, state.getValue(FACING))
 				.setValue(CONNECTION_TYPE, state.getValue(CONNECTION_TYPE))
 				.setValue(CONNECTION_SIDE, state.getValue(CONNECTION_SIDE))
-				/*.setValue(CONNECTION_TOP, state.getValue(CONNECTION_TOP))
-				.setValue(CONNECTION_BOTTOM, state.getValue(CONNECTION_BOTTOM))
-				.setValue(CONNECTION_LEFT, state.getValue(CONNECTION_LEFT))
-				.setValue(CONNECTION_RIGHT, state.getValue(CONNECTION_RIGHT))*/
 				.setValue(WATERLOGGED, state.getValue(WATERLOGGED));
 
 		KineticBlockEntity.switchToBlockState(level, pos, newState);

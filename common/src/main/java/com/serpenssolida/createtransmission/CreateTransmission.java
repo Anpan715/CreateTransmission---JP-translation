@@ -33,7 +33,6 @@ public class CreateTransmission
         //Check used when glue is applied to transmission chain.
         BlockMovementChecks.registerAttachedCheck((state, world, pos, direction) ->
 				state.getBlock() instanceof AbstractTransmissionChainBlock chain && chain.hasShaftTowards(world, pos, state, direction) ? BlockMovementChecks.CheckResult.SUCCESS : BlockMovementChecks.CheckResult.FAIL);
-
     }
 
     /**
