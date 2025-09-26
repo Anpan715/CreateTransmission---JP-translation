@@ -1,0 +1,1867 @@
+{
+  "variants": {
+    "bottom=belt,facing=down,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=belt,facing=down,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "x": 90
+    },
+    "bottom=belt,facing=east,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=belt,facing=east,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "y": 90
+    },
+    "bottom=belt,facing=north,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=belt,facing=north,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=belt,facing=north,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right"
+    },
+    "bottom=belt,facing=north,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=belt,facing=north,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=belt,facing=north,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right"
+    },
+    "bottom=belt,facing=north,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=belt,facing=north,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=belt,facing=north,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom"
+    },
+    "bottom=belt,facing=north,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=belt,facing=north,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=belt,facing=north,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right"
+    },
+    "bottom=belt,facing=north,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=belt,facing=north,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=belt,facing=north,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right"
+    },
+    "bottom=belt,facing=north,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=belt,facing=north,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=belt,facing=north,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom"
+    },
+    "bottom=belt,facing=north,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=belt,facing=north,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=belt,facing=north,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right"
+    },
+    "bottom=belt,facing=north,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=belt,facing=north,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=belt,facing=north,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right"
+    },
+    "bottom=belt,facing=north,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=belt,facing=north,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=belt,facing=north,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom"
+    },
+    "bottom=belt,facing=south,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=belt,facing=south,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "y": -180
+    },
+    "bottom=belt,facing=up,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=belt,facing=up,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "x": 270
+    },
+    "bottom=belt,facing=west,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=belt,facing=west,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_bottom",
+      "y": -90
+    },
+    "bottom=chain,facing=down,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=chain,facing=down,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "x": 90
+    },
+    "bottom=chain,facing=east,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=chain,facing=east,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "y": 90
+    },
+    "bottom=chain,facing=north,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=chain,facing=north,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=chain,facing=north,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right"
+    },
+    "bottom=chain,facing=north,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=chain,facing=north,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=chain,facing=north,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right"
+    },
+    "bottom=chain,facing=north,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=chain,facing=north,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=chain,facing=north,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom"
+    },
+    "bottom=chain,facing=north,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=chain,facing=north,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=chain,facing=north,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right"
+    },
+    "bottom=chain,facing=north,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=chain,facing=north,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=chain,facing=north,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right"
+    },
+    "bottom=chain,facing=north,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=chain,facing=north,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=chain,facing=north,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom"
+    },
+    "bottom=chain,facing=north,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=chain,facing=north,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=chain,facing=north,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right"
+    },
+    "bottom=chain,facing=north,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=chain,facing=north,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=chain,facing=north,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right"
+    },
+    "bottom=chain,facing=north,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=chain,facing=north,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=chain,facing=north,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom"
+    },
+    "bottom=chain,facing=south,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=chain,facing=south,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "y": -180
+    },
+    "bottom=chain,facing=up,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=chain,facing=up,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "x": 270
+    },
+    "bottom=chain,facing=west,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=chain,facing=west,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_bottom",
+      "y": -90
+    },
+    "bottom=none,facing=down,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_left",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_left",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 90
+    },
+    "bottom=none,facing=down,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain",
+      "x": 90
+    },
+    "bottom=none,facing=east,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_left",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_left",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": 90
+    },
+    "bottom=none,facing=east,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain",
+      "y": 90
+    },
+    "bottom=none,facing=north,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=none,facing=north,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=none,facing=north,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right"
+    },
+    "bottom=none,facing=north,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=none,facing=north,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=none,facing=north,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right"
+    },
+    "bottom=none,facing=north,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=none,facing=north,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=none,facing=north,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_left"
+    },
+    "bottom=none,facing=north,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=none,facing=north,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=none,facing=north,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right"
+    },
+    "bottom=none,facing=north,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=none,facing=north,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=none,facing=north,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right"
+    },
+    "bottom=none,facing=north,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=none,facing=north,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=none,facing=north,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_left"
+    },
+    "bottom=none,facing=north,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=none,facing=north,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=none,facing=north,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right"
+    },
+    "bottom=none,facing=north,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=none,facing=north,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=none,facing=north,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right"
+    },
+    "bottom=none,facing=north,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top"
+    },
+    "bottom=none,facing=north,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top"
+    },
+    "bottom=none,facing=north,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain"
+    },
+    "bottom=none,facing=south,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_left",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_left",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -180
+    },
+    "bottom=none,facing=south,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain",
+      "y": -180
+    },
+    "bottom=none,facing=up,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_left",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_left",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "x": 270
+    },
+    "bottom=none,facing=up,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain",
+      "x": 270
+    },
+    "bottom=none,facing=west,left=belt,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=belt,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=belt,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=belt,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=belt,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=belt,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=belt,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=belt,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=belt,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_left",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=chain,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=chain,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=chain,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=chain,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=chain,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=chain,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=chain,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=chain,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=chain,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_left",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=none,right=belt,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=none,right=belt,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=none,right=belt,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_right",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=none,right=chain,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=none,right=chain,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=none,right=chain,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_right",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=none,right=none,top=belt": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_belt_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=none,right=none,top=chain": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain_connected_top",
+      "y": -90
+    },
+    "bottom=none,facing=west,left=none,right=none,top=none": {
+      "model": "createtransmission:block/transmission_chain/encased/andesite_encased_chain",
+      "y": -90
+    }
+  }
+}

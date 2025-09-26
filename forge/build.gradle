@@ -26,7 +26,7 @@ loom {
     runs {
         data {
             data()
-            programArgs "--server", "--client", "--mod", "createtransfer"
+            programArgs "--server", "--client", "--mod", "createtransmission"
             programArgs "--output", generatedResources.absolutePath
         }
     }
@@ -79,8 +79,8 @@ processResources {
 loom {
     forge {
         mixinConfig(
-                "createtransfer-common.mixins.json",
-                "createtransfer.mixins.json"
+                "createtransmission-common.mixins.json",
+                "createtransmission.mixins.json"
         )
     }
 }

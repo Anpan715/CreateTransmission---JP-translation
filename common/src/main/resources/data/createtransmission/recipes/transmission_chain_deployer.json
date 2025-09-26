@@ -1,0 +1,16 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "create:shaft"
+    },
+    {
+      "item": "minecraft:chain"
+    }
+  ],
+  "results": [
+    {
+      "item": "createtransmission:transmission_chain"
+    }
+  ]
+}

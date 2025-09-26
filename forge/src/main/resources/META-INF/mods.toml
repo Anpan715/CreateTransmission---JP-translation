@@ -4,32 +4,32 @@ loaderVersion = "[${forge_version},)"
 license = "MIT"
 
 [[mods]]
-modId = "createtransfer"
+modId = "createtransmission"
 version = "${version}"
-displayName = "Create: Transfer"
+displayName = "Create: Transmission"
 authors = "SerpensSolida"
 description = '''
 This mod adds a single block: Transmission Chain!
 
-This block can be used to power belt in a cleaner way without using encased chain drive.
+This block can be used to power belts in a cleaner way without using encased chain drive.
 '''
 logoFile = "icon.png"
 
-[[dependencies.createtransfer]]
+[[dependencies.createtransmission]]
 modId = "forge"
 mandatory = true
 versionRange = "[${forge_version},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.createtransfer]]
+[[dependencies.createtransmission]]
 modId = "minecraft"
 mandatory = true
 versionRange = "${minecraft_version}"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.createtransfer]]
+[[dependencies.createtransmission]]
 modId="create"
 mandatory=true
 versionRange="${create_version}"

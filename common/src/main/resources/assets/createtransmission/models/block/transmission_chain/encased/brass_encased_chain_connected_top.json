@@ -1,0 +1,7 @@
+{
+	"parent": "createtransmission:block/transmission_chain/encased/encased_chain_connected_top",
+	"textures": {
+		"0": "createtransmission:block/brass_chain_casing",
+		"particle": "createtransmission:block/brass_chain_casing"
+	}
+}

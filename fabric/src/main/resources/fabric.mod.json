@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "createtransfer",
+  "id": "createtransmission",
   "version": "${version}",
   "name": "Create: Transfer",
-  "description": "This mod adds a single block: Transmission Chain!\n\nThis block can be used to power belt in a cleaner way without using encased chain drive.",
+  "description": "This mod adds a single block: Transmission Chain!\n\nThis block can be used to power belts in a cleaner way without using encased chain drive.",
   "authors": [
     "SerpensSolida"
   ],
@@ -11,16 +11,16 @@
     "sources": "${github_repo}"
   },
   "license": "MIT",
-  "icon": "assets/createtransfer/icon.png",
+  "icon": "assets/createtransmission/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.serpenssolida.createtransfer.fabric.CreateTransferFabric"
+      "com.serpenssolida.createtransmission.fabric.CreateTransmissionFabric"
     ]
   },
   "mixins": [
-    "createtransfer.mixins.json",
-    "createtransfer-common.mixins.json"
+    "createtransmission.mixins.json",
+    "createtransmission-common.mixins.json"
   ],
   "depends": {
     "minecraft": "${minecraft_version}",
