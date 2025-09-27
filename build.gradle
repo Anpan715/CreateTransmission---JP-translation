@@ -1,6 +1,6 @@
 plugins {
     id "architectury-plugin" version "3.4.+"
-    id "dev.architectury.loom" version "1.7.+" apply false
+    id "dev.architectury.loom" version "1.9.+" apply false
 }
 
 architectury {
@@ -20,6 +20,10 @@ subprojects {
         // mavens used on both forge and fabric
         maven { url = "https://maven.blamejared.com/" } // JEI
         maven { url = "https://modmaven.dev/" } // Flywheel on both, Create and Registrate on forge
+        maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+        maven { url = "https://maven.ithundxr.dev/mirror" } // Registrate
+        maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
+        maven { url = "https://modmaven.dev/" }
     }
 
     dependencies {
@@ -42,7 +46,7 @@ allprojects {
     // Formats the mod version to include the loader, Minecraft version, and build number (if present)
     // example: 1.0.0+fabric-1.18.2-build.100
     String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
-    version = "$mod_version+$project.name-$minecraft_version" + (buildNumber != null ? "-build.$buildNumber" : "")
+    version = "$mod_version+create$create_version-$project.name-$minecraft_version" + (buildNumber != null ? "-build.$buildNumber" : "")
 
     tasks.withType(JavaCompile).configureEach {
         options.encoding = "UTF-8"
