@@ -1,7 +1,7 @@
 package com.serpenssolida.createtransmission;
 
-import com.simibubi.create.foundation.utility.VecHelper;
-import com.simibubi.create.foundation.utility.VoxelShaper;
+import net.createmod.catnip.math.VecHelper;
+import net.createmod.catnip.math.VoxelShaper;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.Vec3;

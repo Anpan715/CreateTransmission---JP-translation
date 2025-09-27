@@ -1,7 +1,7 @@
 package com.serpenssolida.createtransmission.content.chain;
 
 import com.google.common.collect.ImmutableBiMap;
-import com.simibubi.create.foundation.utility.Lang;
+import net.createmod.catnip.lang.Lang;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.block.Rotation;

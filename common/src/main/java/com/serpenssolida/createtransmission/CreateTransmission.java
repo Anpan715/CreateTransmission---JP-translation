@@ -1,7 +1,7 @@
 package com.serpenssolida.createtransmission;
 
 import com.serpenssolida.createtransmission.content.chain.AbstractTransmissionChainBlock;
-import com.simibubi.create.content.contraptions.BlockMovementChecks;
+import com.simibubi.create.api.contraption.BlockMovementChecks;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;

@@ -3,10 +3,10 @@ package com.serpenssolida.createtransmission.content.chain;
 
 import com.serpenssolida.createtransmission.CTBlocks;
 import com.simibubi.create.AllBlocks;
+import com.simibubi.create.api.schematic.requirement.SpecialBlockItemRequirement;
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.content.decoration.encasing.EncasedBlock;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
-import com.simibubi.create.content.schematics.requirement.ISpecialBlockItemRequirement;
 import com.simibubi.create.content.schematics.requirement.ItemRequirement;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.core.BlockPos;
@@ -24,7 +24,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import java.util.Objects;
 import java.util.function.Supplier;
 
-public class EncasedTransmissionChainBlock extends AbstractTransmissionChainBlock implements EncasedBlock, ISpecialBlockItemRequirement
+public class EncasedTransmissionChainBlock extends AbstractTransmissionChainBlock implements EncasedBlock, SpecialBlockItemRequirement
 {
 	private final Supplier<Block> casing;
 

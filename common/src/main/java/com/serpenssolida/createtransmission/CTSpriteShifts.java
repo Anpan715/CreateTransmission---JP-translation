@@ -1,7 +1,7 @@
 package com.serpenssolida.createtransmission;
 
-import com.simibubi.create.foundation.block.render.SpriteShiftEntry;
-import com.simibubi.create.foundation.block.render.SpriteShifter;
+import net.createmod.catnip.render.SpriteShiftEntry;
+import net.createmod.catnip.render.SpriteShifter;
 
 public class CTSpriteShifts
 {

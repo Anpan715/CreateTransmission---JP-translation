@@ -1,13 +1,18 @@
 package com.serpenssolida.createtransmission;
 
+import com.serpenssolida.createtransmission.content.chain.AbstractTransmissionChainBlock;
 import com.serpenssolida.createtransmission.content.chain.EncasedTransmissionChainBlock;
 import com.serpenssolida.createtransmission.content.chain.TransmissionChainBlock;
 import com.simibubi.create.AllTags.AllBlockTags;
+import com.simibubi.create.api.stress.BlockStressValues;
 import com.simibubi.create.content.decoration.encasing.EncasingRegistry;
-import com.simibubi.create.content.kinetics.BlockStressDefaults;
+import com.simibubi.create.infrastructure.config.CStress;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.PushReaction;
+
+import java.util.function.DoubleSupplier;
 
 import static com.serpenssolida.createtransmission.CTBuilderTransformers.encasedTransmissionChain;
 import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
@@ -24,7 +29,6 @@ public class CTBlocks
 			.lang("Transmission Chain")
 			.properties(properties -> properties.pushReaction(PushReaction.DESTROY).noCollission().strength(0.8f).sound(SoundType.WOOL))
 			.tag(AllBlockTags.BRITTLE.tag, AllBlockTags.FAN_TRANSPARENT.tag, AllBlockTags.MOVABLE_EMPTY_COLLIDER.tag, AllBlockTags.WRENCH_PICKUP.tag)
-			.transform(BlockStressDefaults.setNoImpact())
 			.transform(axeOrPickaxe())
 			.blockstate(CTBuilderTransformers::noModel)
 			.item()
@@ -38,7 +42,6 @@ public class CTBlocks
 			.initialProperties(TRANSMISSION_CHAIN)
 			.tag(AllBlockTags.BRITTLE.tag, AllBlockTags.FAN_TRANSPARENT.tag, AllBlockTags.MOVABLE_EMPTY_COLLIDER.tag, AllBlockTags.WRENCH_PICKUP.tag)
 			.loot((p, b) -> p.dropOther(b, TRANSMISSION_CHAIN.get()))
-			.transform(BlockStressDefaults.setNoImpact())
 			.transform(axeOrPickaxe())
 			.transform(EncasingRegistry.addVariantTo(TRANSMISSION_CHAIN))
 			.blockstate((c, p) -> encasedTransmissionChain(c, p, "andesite"))
@@ -50,7 +53,6 @@ public class CTBlocks
 			.initialProperties(TRANSMISSION_CHAIN)
 			.tag(AllBlockTags.BRITTLE.tag, AllBlockTags.FAN_TRANSPARENT.tag, AllBlockTags.MOVABLE_EMPTY_COLLIDER.tag, AllBlockTags.WRENCH_PICKUP.tag)
 			.loot((p, b) -> p.dropOther(b, TRANSMISSION_CHAIN.get()))
-			.transform(BlockStressDefaults.setNoImpact())
 			.transform(axeOrPickaxe())
 			.transform(EncasingRegistry.addVariantTo(TRANSMISSION_CHAIN))
 			.blockstate((c, p) -> encasedTransmissionChain(c, p, "brass"))
@@ -65,6 +67,9 @@ public class CTBlocks
 	public static void init()
 	{
 		CreateTransmission.LOGGER.info("Registering blocks for " + CreateTransmission.NAME);
+		BlockStressValues.IMPACTS.register(TRANSMISSION_CHAIN.get(), () -> 0);
+		BlockStressValues.IMPACTS.register(ANDESITE_ENCASED_TRANSMISSION_CHAIN.get(), () -> 0);
+		BlockStressValues.IMPACTS.register(BRASS_ENCASED_TRANSMISSION_CHAIN.get(), () -> 0);
 	}
 
 }

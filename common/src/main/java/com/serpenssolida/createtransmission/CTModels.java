@@ -1,6 +1,6 @@
 package com.serpenssolida.createtransmission;
 
-import com.jozufozu.flywheel.core.PartialModel;
+import dev.engine_room.flywheel.lib.model.baked.PartialModel;
 
 public class CTModels
 {
@@ -24,7 +24,7 @@ public class CTModels
 	 */
 	protected static PartialModel block(String path)
 	{
-		return new PartialModel(CreateTransmission.asResource("block/" + path));
+		return PartialModel.of(CreateTransmission.asResource("block/" + path));
 	}
 
 }
