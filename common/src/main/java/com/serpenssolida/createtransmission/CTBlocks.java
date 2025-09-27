@@ -6,6 +6,7 @@ import com.simibubi.create.AllTags.AllBlockTags;
 import com.simibubi.create.content.decoration.encasing.EncasingRegistry;
 import com.simibubi.create.content.kinetics.BlockStressDefaults;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.PushReaction;
 
 import static com.serpenssolida.createtransmission.CTBuilderTransformers.encasedTransmissionChain;
@@ -21,7 +22,7 @@ public class CTBlocks
 	public static final BlockEntry<TransmissionChainBlock> TRANSMISSION_CHAIN = CreateTransmission.REGISTRATE
 			.block("transmission_chain", TransmissionChainBlock::new)
 			.lang("Transmission Chain")
-			.properties(properties -> properties.pushReaction(PushReaction.DESTROY).noCollission())
+			.properties(properties -> properties.pushReaction(PushReaction.DESTROY).noCollission().strength(0.8f).sound(SoundType.WOOL))
 			.tag(AllBlockTags.BRITTLE.tag, AllBlockTags.FAN_TRANSPARENT.tag, AllBlockTags.MOVABLE_EMPTY_COLLIDER.tag, AllBlockTags.WRENCH_PICKUP.tag)
 			.transform(BlockStressDefaults.setNoImpact())
 			.transform(axeOrPickaxe())
@@ -34,9 +35,9 @@ public class CTBlocks
 	public static final BlockEntry<EncasedTransmissionChainBlock> ANDESITE_ENCASED_TRANSMISSION_CHAIN = CreateTransmission.REGISTRATE
 			.block("andesite_encased_transmission_chain", EncasedTransmissionChainBlock::getAndesite)
 			.lang("Andesite Encased Transmission Chain")
-			.properties(properties -> properties.pushReaction(PushReaction.DESTROY).noCollission())
+			.initialProperties(TRANSMISSION_CHAIN)
 			.tag(AllBlockTags.BRITTLE.tag, AllBlockTags.FAN_TRANSPARENT.tag, AllBlockTags.MOVABLE_EMPTY_COLLIDER.tag, AllBlockTags.WRENCH_PICKUP.tag)
-			.tag(AllBlockTags.BRITTLE.tag)
+			.loot((p, b) -> p.dropOther(b, TRANSMISSION_CHAIN.get()))
 			.transform(BlockStressDefaults.setNoImpact())
 			.transform(axeOrPickaxe())
 			.transform(EncasingRegistry.addVariantTo(TRANSMISSION_CHAIN))
@@ -46,8 +47,9 @@ public class CTBlocks
 	public static final BlockEntry<EncasedTransmissionChainBlock> BRASS_ENCASED_TRANSMISSION_CHAIN = CreateTransmission.REGISTRATE
 			.block("brass_encased_transmission_chain", EncasedTransmissionChainBlock::getBrass)
 			.lang("Brass Encased Transmission Chain")
-			.properties(properties -> properties.pushReaction(PushReaction.DESTROY).noCollission())
+			.initialProperties(TRANSMISSION_CHAIN)
 			.tag(AllBlockTags.BRITTLE.tag, AllBlockTags.FAN_TRANSPARENT.tag, AllBlockTags.MOVABLE_EMPTY_COLLIDER.tag, AllBlockTags.WRENCH_PICKUP.tag)
+			.loot((p, b) -> p.dropOther(b, TRANSMISSION_CHAIN.get()))
 			.transform(BlockStressDefaults.setNoImpact())
 			.transform(axeOrPickaxe())
 			.transform(EncasingRegistry.addVariantTo(TRANSMISSION_CHAIN))
