@@ -1,5 +1,8 @@
 name: build
-on: [ pull_request, push ]
+on:
+  push:
+    branches:
+      - deploy1.20.1
 
 jobs:
   build:
