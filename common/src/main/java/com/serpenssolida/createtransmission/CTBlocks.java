@@ -1,18 +1,12 @@
 package com.serpenssolida.createtransmission;
 
-import com.serpenssolida.createtransmission.content.chain.AbstractTransmissionChainBlock;
 import com.serpenssolida.createtransmission.content.chain.EncasedTransmissionChainBlock;
 import com.serpenssolida.createtransmission.content.chain.TransmissionChainBlock;
 import com.simibubi.create.AllTags.AllBlockTags;
-import com.simibubi.create.api.stress.BlockStressValues;
 import com.simibubi.create.content.decoration.encasing.EncasingRegistry;
-import com.simibubi.create.infrastructure.config.CStress;
 import com.tterrag.registrate.util.entry.BlockEntry;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.PushReaction;
-
-import java.util.function.DoubleSupplier;
 
 import static com.serpenssolida.createtransmission.CTBuilderTransformers.encasedTransmissionChain;
 import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
@@ -67,9 +61,6 @@ public class CTBlocks
 	public static void init()
 	{
 		CreateTransmission.LOGGER.info("Registering blocks for " + CreateTransmission.NAME);
-		BlockStressValues.IMPACTS.register(TRANSMISSION_CHAIN.get(), () -> 0);
-		BlockStressValues.IMPACTS.register(ANDESITE_ENCASED_TRANSMISSION_CHAIN.get(), () -> 0);
-		BlockStressValues.IMPACTS.register(BRASS_ENCASED_TRANSMISSION_CHAIN.get(), () -> 0);
 	}
 
 }
