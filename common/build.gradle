@@ -8,10 +8,13 @@ loom {
 
 repositories {
     // mavens for Create Fabric and dependencies
-    maven { url = "https://mvn.devos.one/releases" } // Porting Lib releases
+    /*maven { url = "https://mvn.devos.one/releases" } // Porting Lib releases
     maven { url = "https://mvn.devos.one/snapshots" } // Create and several dependencies
     maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
     maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven" } // Forge Config API Port
+
+    maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+    maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
 
     maven { // Fabric ASM for Porting Lib
         url = "https://jitpack.io/"
@@ -22,23 +25,23 @@ repositories {
     maven { url = "https://maven.blamejared.com" } // JEI
 
     maven { url = "https://api.modrinth.com/maven" } // LazyDFU
-    maven { url = "https://maven.terraformersmc.com/releases" } // Mod Menu, EMI
+    maven { url = "https://maven.terraformersmc.com/releases" } // Mod Menu, EMI*/
 }
 
 dependencies {
     // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
     // Do NOT use other classes from fabric loader
-    modImplementation("net.fabricmc:fabric-loader:$fabric_loader_version")
+    //modImplementation("net.fabricmc:fabric-loader:$fabric_loader_version")
 
-    forge("net.minecraftforge:forge:$minecraft_version-$forge_version")
-    modApi("dev.architectury:architectury-forge:$architectury_version")
-    modApi("dev.architectury:architectury-forge:$architectury_version")
-    modImplementation("com.simibubi.create:create-$minecraft_version:$create_forge_version:slim"){transitive = false}
-    modCompileOnly("dev.engine-room.flywheel:flywheel-forge-api-$flywheel_forge_minecraft_version:$flywheel_forge_version")
-    modRuntimeOnly("dev.engine-room.flywheel:flywheel-forge-$flywheel_forge_minecraft_version:$flywheel_forge_version")
-    //modRuntimeOnly("dev.engine-room.vanillin:vanillin-forge-$flywheel_forge_minecraft_version:${vanillin_version}")
-    modImplementation("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_forge_version}")
-    modImplementation("com.tterrag.registrate:Registrate:${registrate_forge_version}")
+    neoForge("net.neoforged:neoforge:$neoforge_version")
+    modApi("dev.architectury:architectury-neoforge:$architectury_version")
+
+    //Create
+    modImplementation("com.simibubi.create:create-$minecraft_version:$create_neoforge_version:slim") { transitive = false }
+    modCompileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-$minecraft_version:$flywheel_neoforge_version")
+    modRuntimeOnly("dev.engine-room.flywheel:flywheel-neoforge-$minecraft_version:$flywheel_neoforge_version")
+    modImplementation("net.createmod.ponder:Ponder-NeoForge-$minecraft_version:$ponder_neoforge_version")
+    modImplementation("com.tterrag.registrate:Registrate:$registrate_neoforge_version")
 
     // Compile against Create Fabric in common
     // beware of differences across platforms!
@@ -46,5 +49,5 @@ dependencies {
     // All dependencies except Flywheel and Registrate are NOT safe to use!
     // Flywheel and Registrate must also be used carefully due to differences across loaders.
     //modCompileOnly("com.simibubi.create:create-fabric-$minecraft_version:$create_fabric_version")
-    modCompileOnly("com.simibubi.create:create-$minecraft_version:$create_forge_version:slim")
+    //modCompileOnly("com.simibubi.create:create-$minecraft_version:$create_neoforge_version:slim")
 }

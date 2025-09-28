@@ -1,4 +1,4 @@
-package com.serpenssolida.createtransmission.forge;
+package com.serpenssolida.createtransmission.neoforge;
 
 import com.serpenssolida.createtransmission.content.chain.AbstractTransmissionChainBlock;
 import com.serpenssolida.createtransmission.content.chain.TransmissionChainHelpers.ChainConnection;
@@ -11,9 +11,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.client.model.generators.VariantBlockStateBuilder;
 
 import static com.serpenssolida.createtransmission.content.chain.TransmissionChainHelpers.*;
 
@@ -55,7 +55,7 @@ public class CTBuilderTransformersImpl
 	public static <T extends Block> void noModel(DataGenContext<Block, T> ctx, RegistrateBlockstateProvider prov)
 	{
 		VariantBlockStateBuilder variantBuilder = prov.getVariantBuilder(ctx.getEntry());
-		ModelFile.ExistingModelFile modelFile = prov.models().getExistingFile(new ResourceLocation(Create.ID, "block/belt/particle"));
+		ModelFile.ExistingModelFile modelFile = prov.models().getExistingFile(ResourceLocation.fromNamespaceAndPath(Create.ID, "block/belt/particle"));
 
 		variantBuilder.forAllStatesExcept(state -> ConfiguredModel.builder().modelFile(modelFile).build(), AbstractTransmissionChainBlock.WATERLOGGED);
 	}

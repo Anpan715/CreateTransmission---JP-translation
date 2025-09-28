@@ -1,4 +1,4 @@
-package com.serpenssolida.createtransmission.forge;
+package com.serpenssolida.createtransmission.neoforge;
 
 public class CTExpectPlatformImpl
 {

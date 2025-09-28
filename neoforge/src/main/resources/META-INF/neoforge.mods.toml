@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[${forge_version},)"
+loaderVersion = "1,)"
 #issueTrackerURL = ""
 license = "MIT"
 
@@ -16,22 +16,27 @@ This block can be used to power belts in a cleaner way without using encased cha
 logoFile = "icon.png"
 
 [[dependencies.createtransmission]]
-modId = "forge"
-mandatory = true
-versionRange = "[${forge_version},)"
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforge_version},)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.createtransmission]]
 modId = "minecraft"
-mandatory = true
+type = "required"
 versionRange = "${minecraft_version}"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.createtransmission]]
 modId="create"
-mandatory=true
+type = "required"
 versionRange="${create_version}"
 ordering="NONE"
 side="BOTH"
+
+[[mixins]]
+config = "createtransmission-common.mixins.json"
+[[mixins]]
+config = "createtransmission.mixins.json"

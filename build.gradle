@@ -1,6 +1,7 @@
 plugins {
-    id "architectury-plugin" version "3.4.+"
-    id "dev.architectury.loom" version "1.9.+" apply false
+    id "dev.architectury.loom" version "1.11-SNAPSHOT" apply false
+    id "architectury-plugin" version "3.4-SNAPSHOT"
+    id 'com.gradleup.shadow' version '8.3.6' apply false
 }
 
 architectury {
@@ -9,6 +10,7 @@ architectury {
 
 subprojects {
     apply plugin: "dev.architectury.loom"
+    apply plugin: 'architectury-plugin'
 
     loom {
         silentMojangMappingsLicense()
@@ -24,6 +26,10 @@ subprojects {
         maven { url = "https://maven.ithundxr.dev/mirror" } // Registrate
         maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
         maven { url = "https://modmaven.dev/" }
+        maven { url = "https://maven.neoforged.net/releases/" }
+        maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
+        maven { url = "https://maven.ftb.dev/releases" } // FTB
+
     }
 
     dependencies {
@@ -32,6 +38,12 @@ subprojects {
         mappings loom.officialMojangMappings()
 
         // see each subproject for more dependencies.
+    }
+
+    java {
+        withSourcesJar()
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 }
 
@@ -50,9 +62,6 @@ allprojects {
 
     tasks.withType(JavaCompile).configureEach {
         options.encoding = "UTF-8"
-    }
-
-    java {
-        withSourcesJar()
+        options.release = 21
     }
 }
