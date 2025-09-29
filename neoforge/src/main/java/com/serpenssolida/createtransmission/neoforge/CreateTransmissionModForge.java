@@ -1,5 +1,6 @@
 package com.serpenssolida.createtransmission.neoforge;
 
+import com.serpenssolida.createtransmission.CTModels;
 import com.serpenssolida.createtransmission.CreateTransmission;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -15,4 +16,6 @@ public class CreateTransmissionModForge
         CreateTransmission.init();
         CTCreativeTabsImpl.register(modBus);
     }
+
+
 }
