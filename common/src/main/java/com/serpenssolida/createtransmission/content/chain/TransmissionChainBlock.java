@@ -4,6 +4,7 @@ import com.simibubi.create.content.decoration.encasing.EncasableBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -19,23 +20,23 @@ public class TransmissionChainBlock extends AbstractTransmissionChainBlock imple
 	}
 
 	@Override
-	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult ray)
+	protected ItemInteractionResult useItemOn(ItemStack item, BlockState state, Level world, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult ray)
 	{
 		if (player.isShiftKeyDown() || !player.mayBuild())
-			return InteractionResult.PASS;
+			return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
 
-		ItemStack heldItem = player.getItemInHand(hand);
-		InteractionResult result = tryEncase(state, world, pos, heldItem, player, hand, ray);
+		ItemStack heldItem = player.getItemInHand(interactionHand);
+		ItemInteractionResult result = tryEncase(state, world, pos, heldItem, player, interactionHand, ray);
 		if (result.consumesAction())
 			return result;
 
-		return InteractionResult.PASS;
+		return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
 	}
 
 	@Override
-	public InteractionResult tryEncase(BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand hand, BlockHitResult ray)
+	public ItemInteractionResult tryEncase(BlockState state, Level level, BlockPos pos, ItemStack heldItem, Player player, InteractionHand interactionHand, BlockHitResult ray)
 	{
-		return EncasableBlock.super.tryEncase(state, level, pos, heldItem, player, hand, ray);
+		return EncasableBlock.super.tryEncase(state, level, pos, heldItem, player, interactionHand, ray);
 	}
 
 	@Override

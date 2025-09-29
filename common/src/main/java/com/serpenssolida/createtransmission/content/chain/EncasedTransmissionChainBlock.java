@@ -12,6 +12,7 @@ import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
@@ -49,9 +50,9 @@ public class EncasedTransmissionChainBlock extends AbstractTransmissionChainBloc
 	}
 
 	@Override
-	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult ray)
+	protected ItemInteractionResult useItemOn(ItemStack item, BlockState state, Level world, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult ray)
 	{
-		return super.use(state, world, pos, player, hand, ray);
+		return super.useItemOn(item, state, world, pos, player, interactionHand, ray);
 	}
 
 	@Override

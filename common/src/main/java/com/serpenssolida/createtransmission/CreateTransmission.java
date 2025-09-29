@@ -3,7 +3,9 @@ package com.serpenssolida.createtransmission;
 import com.serpenssolida.createtransmission.content.chain.AbstractTransmissionChainBlock;
 import com.simibubi.create.api.contraption.BlockMovementChecks;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +24,8 @@ public class CreateTransmission
      */
     public static void init()
     {
+        REGISTRATE.defaultCreativeTab((ResourceKey<CreativeModeTab>) null);
+
         CTCreativeTabs.init();
 
         CTSpriteShifts.init();
@@ -43,6 +47,6 @@ public class CreateTransmission
      */
 	public static ResourceLocation asResource(String path)
     {
-        return new ResourceLocation(MOD_ID, path);
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 }
